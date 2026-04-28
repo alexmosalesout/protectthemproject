@@ -1,0 +1,2140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Protect Them Project — Health Sovereignty for Those Who Serve</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  /* ------------------------------------------------------------------
+     PROTECT THEM PROJECT — Board Presentation
+     Aesthetic: Luxury editorial. Black & gold. Serif display + clean sans.
+  ------------------------------------------------------------------ */
+
+  :root {
+    --black: #0a0a0a;
+    --black-2: #111111;
+    --black-3: #1a1a1a;
+    --ink: #050505;
+    --gold: #c5a24d;
+    --gold-light: #e8c84a;
+    --gold-deep: #9a7b2a;
+    --gold-soft: rgba(197, 162, 77, 0.15);
+    --gold-line: rgba(197, 162, 77, 0.3);
+    --cream: #f5ede0;
+    --bone: #ebe3d4;
+    --text: #e8e2d4;
+    --text-muted: #9a958a;
+    --text-dim: #6b6760;
+    --serif: 'Cormorant Garamond', Georgia, serif;
+    --sans: 'Inter', -apple-system, sans-serif;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: var(--black);
+    color: var(--text);
+    font-family: var(--sans);
+    font-weight: 300;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden;
+  }
+
+  /* Subtle gold grain texture overlay applied site-wide */
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: 1;
+    background-image: radial-gradient(circle at 20% 30%, rgba(197, 162, 77, 0.04) 0%, transparent 40%),
+                      radial-gradient(circle at 80% 70%, rgba(197, 162, 77, 0.03) 0%, transparent 40%);
+  }
+
+  ::selection { background: var(--gold); color: var(--black); }
+
+  /* --------------------- Layout primitives --------------------- */
+
+  .slide {
+    position: relative;
+    min-height: 100vh;
+    padding: 6rem 4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-bottom: 1px solid var(--gold-line);
+    z-index: 2;
+  }
+
+  .slide-num {
+    position: absolute;
+    top: 2rem;
+    right: 4rem;
+    font-family: var(--serif);
+    font-style: italic;
+    font-size: 0.85rem;
+    color: var(--text-dim);
+    letter-spacing: 0.15em;
+  }
+
+  .slide-num::before {
+    content: '';
+    display: inline-block;
+    width: 30px;
+    height: 1px;
+    background: var(--gold);
+    vertical-align: middle;
+    margin-right: 0.75rem;
+  }
+
+  .container {
+    max-width: 1280px;
+    margin: 0 auto;
+    width: 100%;
+  }
+
+  .eyebrow {
+    font-family: var(--sans);
+    font-size: 0.75rem;
+    font-weight: 500;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 1.5rem;
+    display: inline-block;
+  }
+
+  .eyebrow.bordered {
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid var(--gold-line);
+  }
+
+  h1, h2, h3, h4 {
+    font-family: var(--serif);
+    font-weight: 500;
+    line-height: 1.1;
+    color: var(--cream);
+  }
+
+  .title-xl {
+    font-size: clamp(3.5rem, 7vw, 6.5rem);
+    font-weight: 600;
+    letter-spacing: -0.02em;
+    line-height: 1;
+  }
+
+  .title-l {
+    font-size: clamp(2.5rem, 4.5vw, 4rem);
+    font-weight: 500;
+    letter-spacing: -0.015em;
+    line-height: 1.05;
+    margin-bottom: 1.5rem;
+  }
+
+  .title-m {
+    font-size: clamp(1.5rem, 2vw, 1.85rem);
+    font-weight: 500;
+    color: var(--cream);
+    margin-bottom: 1rem;
+  }
+
+  .lede {
+    font-family: var(--serif);
+    font-style: italic;
+    font-size: clamp(1.25rem, 1.6vw, 1.5rem);
+    color: var(--text);
+    font-weight: 400;
+    max-width: 720px;
+    margin-bottom: 3rem;
+    line-height: 1.4;
+  }
+
+  .body-text {
+    font-size: 1rem;
+    color: var(--text);
+    font-weight: 300;
+    line-height: 1.7;
+  }
+
+  .gold { color: var(--gold); }
+  .gold-light { color: var(--gold-light); }
+
+  .gold-text-grad {
+    background: linear-gradient(180deg, #e8c84a 0%, #c5a24d 50%, #9a7b2a 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  /* Decorative top rule */
+  .top-rule {
+    width: 80px;
+    height: 1px;
+    background: var(--gold);
+    margin-bottom: 2rem;
+  }
+
+  /* --------------------- Slide 1: Title --------------------- */
+
+  .slide-title {
+    background:
+      radial-gradient(ellipse at top, rgba(197, 162, 77, 0.12) 0%, transparent 50%),
+      radial-gradient(ellipse at bottom, rgba(197, 162, 77, 0.08) 0%, transparent 50%),
+      linear-gradient(180deg, #0a0a0a 0%, #050505 100%);
+    text-align: center;
+    align-items: center;
+    padding: 4rem 4rem;
+  }
+
+  .slide-title .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .slide-title .container > .subtitle,
+  .slide-title .container > .badge-row {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .slide-title .ornament {
+    width: 60px;
+    height: 1px;
+    background: var(--gold);
+    margin: 0 auto 1.5rem;
+    position: relative;
+  }
+  .slide-title .ornament::before,
+  .slide-title .ornament::after {
+    content: '';
+    position: absolute;
+    top: -3px;
+    width: 6px;
+    height: 6px;
+    border: 1px solid var(--gold);
+    transform: rotate(45deg);
+  }
+  .slide-title .ornament::before { left: -10px; }
+  .slide-title .ornament::after { right: -10px; }
+
+  .slide-title h1 {
+    font-size: clamp(3.5rem, 8vw, 7.5rem);
+    font-weight: 600;
+    letter-spacing: -0.02em;
+    line-height: 0.95;
+    margin-bottom: 1.5rem;
+  }
+
+  .slide-title h1 .row1 { display: block; }
+  .slide-title h1 .row2 { 
+    display: block; 
+    font-style: italic;
+    font-weight: 400;
+  }
+
+  .slide-title .subtitle {
+    font-family: var(--serif);
+    font-style: italic;
+    font-size: clamp(1.1rem, 1.5vw, 1.4rem);
+    color: var(--text);
+    margin-bottom: 0.5rem;
+    max-width: 640px;
+  }
+
+  .slide-title .clinic-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4rem;
+    margin: 4rem 0 3rem;
+    flex-wrap: wrap;
+  }
+
+  .clinic-card {
+    width: 240px;
+    aspect-ratio: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    position: relative;
+    border: 1px solid var(--gold-line);
+    transition: transform 0.4s ease, border-color 0.4s ease;
+  }
+
+  .clinic-card:hover {
+    transform: translateY(-4px);
+    border-color: var(--gold);
+  }
+
+  .clinic-card.dark {
+    background: var(--black-2);
+  }
+
+  .clinic-card.light {
+    background: var(--bone);
+  }
+
+  .clinic-card svg {
+    width: 100%;
+    height: 100%;
+    max-height: 180px;
+  }
+
+  .clinic-card .corner {
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    border: 1px solid var(--gold);
+  }
+  .clinic-card .corner.tl { top: -1px; left: -1px; border-right: none; border-bottom: none; }
+  .clinic-card .corner.tr { top: -1px; right: -1px; border-left: none; border-bottom: none; }
+  .clinic-card .corner.bl { bottom: -1px; left: -1px; border-right: none; border-top: none; }
+  .clinic-card .corner.br { bottom: -1px; right: -1px; border-left: none; border-top: none; }
+
+  .mission-line {
+    font-family: var(--serif);
+    font-size: clamp(1.1rem, 1.5vw, 1.35rem);
+    color: var(--text);
+    margin-top: 1rem;
+  }
+  .mission-line strong {
+    font-weight: 600;
+    font-style: italic;
+    color: var(--gold-light);
+  }
+
+  .badge-row {
+    display: flex;
+    justify-content: center;
+    gap: 4rem;
+    margin-top: 3rem;
+    padding-top: 2.5rem;
+    border-top: 1px solid var(--gold-line);
+    width: 100%;
+    max-width: 600px;
+  }
+
+  .badge {
+    text-align: center;
+  }
+  .badge .num {
+    font-family: var(--serif);
+    font-size: 2rem;
+    font-weight: 600;
+    color: var(--gold);
+    line-height: 1;
+    margin-bottom: 0.5rem;
+  }
+  .badge .lbl {
+    font-size: 0.7rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+  }
+
+  .presented-to {
+    margin-top: 2rem;
+    font-size: 0.8rem;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+  }
+
+  /* --------------------- Slide 2: Built by physicians --------------------- */
+
+  .two-col {
+    display: grid;
+    grid-template-columns: 1.1fr 1fr;
+    gap: 5rem;
+    align-items: start;
+  }
+
+  .specialty-list {
+    list-style: none;
+    margin-top: 1.5rem;
+  }
+
+  .specialty-list li {
+    font-family: var(--serif);
+    font-size: 1.4rem;
+    color: var(--cream);
+    padding: 0.85rem 0;
+    border-bottom: 1px solid rgba(197, 162, 77, 0.15);
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .specialty-list li::before {
+    content: '';
+    width: 8px;
+    height: 8px;
+    border: 1px solid var(--gold);
+    transform: rotate(45deg);
+    flex-shrink: 0;
+  }
+
+  .why-block {
+    background: linear-gradient(135deg, var(--black-2) 0%, var(--black-3) 100%);
+    border: 1px solid var(--gold-line);
+    border-left: 3px solid var(--gold);
+    padding: 2.5rem;
+    position: relative;
+  }
+
+  .why-block .quote-mark {
+    position: absolute;
+    top: -10px;
+    left: 1.5rem;
+    font-family: var(--serif);
+    font-size: 6rem;
+    color: var(--gold);
+    line-height: 1;
+    opacity: 0.5;
+  }
+
+  .why-block p {
+    font-family: var(--serif);
+    font-size: 1.15rem;
+    line-height: 1.6;
+    color: var(--text);
+    margin-bottom: 1rem;
+  }
+
+  .why-block p:last-child {
+    margin-bottom: 0;
+    font-style: italic;
+    color: var(--gold-light);
+    font-weight: 500;
+  }
+
+  /* --------------------- Slide 3: Stats --------------------- */
+
+  .stat-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0;
+    margin-top: 4rem;
+    border-top: 1px solid var(--gold-line);
+    border-bottom: 1px solid var(--gold-line);
+  }
+
+  .stat {
+    padding: 3rem 2rem;
+    border-right: 1px solid var(--gold-line);
+    position: relative;
+  }
+  .stat:last-child { border-right: none; }
+
+  .stat .figure {
+    font-family: var(--serif);
+    font-size: clamp(3.5rem, 5vw, 5rem);
+    font-weight: 600;
+    line-height: 1;
+    background: linear-gradient(180deg, #e8c84a 0%, #c5a24d 60%, #9a7b2a 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 0.5rem;
+    letter-spacing: -0.02em;
+  }
+
+  .stat .label {
+    font-family: var(--serif);
+    font-size: 1.1rem;
+    color: var(--cream);
+    margin-bottom: 1rem;
+    font-style: italic;
+    line-height: 1.3;
+  }
+
+  .stat .desc {
+    font-size: 0.82rem;
+    color: var(--text-muted);
+    line-height: 1.5;
+  }
+
+  .sources {
+    margin-top: 2.5rem;
+    font-size: 0.75rem;
+    color: var(--text-dim);
+    font-style: italic;
+    letter-spacing: 0.02em;
+  }
+
+  /* --------------------- Slide 4: Vicious Cycle Diagram --------------------- */
+
+  .cycle-wrap {
+    margin-top: 3rem;
+    display: grid;
+    grid-template-columns: 1fr 1.4fr;
+    gap: 4rem;
+    align-items: center;
+  }
+
+  .cycle-svg {
+    width: 100%;
+    height: auto;
+  }
+
+  .cycle-nodes {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+
+  .node {
+    background: var(--black-2);
+    border: 1px solid var(--gold-line);
+    padding: 1.25rem 1.5rem;
+    position: relative;
+    transition: border-color 0.3s ease;
+  }
+  .node:hover { border-color: var(--gold); }
+
+  .node.center {
+    grid-column: span 2;
+    background: linear-gradient(135deg, rgba(197, 162, 77, 0.15) 0%, rgba(197, 162, 77, 0.05) 100%);
+    border-color: var(--gold);
+  }
+
+  .node .n {
+    font-family: var(--serif);
+    font-size: 0.8rem;
+    font-style: italic;
+    color: var(--gold);
+    letter-spacing: 0.1em;
+    margin-bottom: 0.25rem;
+  }
+
+  .node h4 {
+    font-size: 1.05rem;
+    font-weight: 500;
+    color: var(--cream);
+    margin-bottom: 0.25rem;
+    line-height: 1.2;
+  }
+
+  .node p {
+    font-size: 0.78rem;
+    color: var(--text-muted);
+    margin: 0;
+  }
+
+  .closing-emphasis {
+    margin-top: 3rem;
+    padding: 1.5rem 2rem;
+    border-left: 3px solid var(--gold);
+    font-family: var(--serif);
+    font-size: 1.25rem;
+    font-style: italic;
+    color: var(--cream);
+  }
+  .closing-emphasis strong {
+    color: var(--gold-light);
+    font-weight: 500;
+  }
+
+  /* --------------------- Slide 5: Comparison --------------------- */
+
+  .compare-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0;
+    margin-top: 3rem;
+    border: 1px solid var(--gold-line);
+  }
+
+  .compare-col {
+    padding: 2.5rem;
+  }
+
+  .compare-col.standard {
+    background: var(--black-2);
+    border-right: 1px solid var(--gold-line);
+  }
+
+  .compare-col.ours {
+    background: linear-gradient(135deg, rgba(197, 162, 77, 0.08) 0%, rgba(197, 162, 77, 0.02) 100%);
+    position: relative;
+  }
+
+  .compare-header {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .compare-tag {
+    font-size: 0.7rem;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+  }
+  .compare-col.ours .compare-tag { color: var(--gold); }
+
+  .compare-col h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    color: var(--cream);
+  }
+
+  .compare-sub {
+    font-family: var(--serif);
+    font-style: italic;
+    font-size: 1rem;
+    color: var(--text-muted);
+    margin-bottom: 1.75rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid rgba(197, 162, 77, 0.15);
+  }
+  .compare-col.ours .compare-sub { color: var(--gold-light); }
+
+  .compare-list {
+    list-style: none;
+  }
+  .compare-list li {
+    padding: 0.85rem 0;
+    color: var(--text);
+    font-size: 0.95rem;
+    line-height: 1.45;
+    display: flex;
+    gap: 0.85rem;
+    align-items: flex-start;
+    border-bottom: 1px dotted rgba(197, 162, 77, 0.1);
+  }
+  .compare-list li:last-child { border-bottom: none; }
+  .compare-list li::before {
+    flex-shrink: 0;
+    margin-top: 0.4rem;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    content: '';
+  }
+  .compare-col.standard .compare-list li::before {
+    background: var(--text-dim);
+  }
+  .compare-col.ours .compare-list li::before {
+    background: var(--gold);
+    box-shadow: 0 0 8px rgba(197, 162, 77, 0.5);
+  }
+
+  /* --------------------- Slide 6: Program features grid --------------------- */
+
+  .feature-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    margin-top: 3rem;
+  }
+
+  .feature {
+    background: var(--black-2);
+    border: 1px solid var(--gold-line);
+    padding: 2rem;
+    position: relative;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+  }
+  .feature:hover {
+    transform: translateY(-4px);
+    border-color: var(--gold);
+  }
+
+  .feature .icon-wrap {
+    width: 48px;
+    height: 48px;
+    border: 1px solid var(--gold);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.25rem;
+    color: var(--gold);
+  }
+
+  .feature h4 {
+    font-size: 1.2rem;
+    color: var(--cream);
+    margin-bottom: 0.5rem;
+  }
+
+  .feature p {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    line-height: 1.6;
+  }
+
+  .feature-footer {
+    text-align: center;
+    margin-top: 3rem;
+    font-family: var(--serif);
+    font-style: italic;
+    font-size: 1.15rem;
+    color: var(--gold-light);
+  }
+
+  /* --------------------- Slide 7: Diagnostics --------------------- */
+
+  .diag-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0;
+    margin-top: 3rem;
+    border-top: 1px solid var(--gold-line);
+    border-left: 1px solid var(--gold-line);
+  }
+
+  .diag {
+    padding: 2.25rem 2rem;
+    border-right: 1px solid var(--gold-line);
+    border-bottom: 1px solid var(--gold-line);
+    background: var(--black);
+    transition: background 0.3s ease;
+  }
+  .diag:hover { background: var(--black-2); }
+
+  .diag .num {
+    font-family: var(--serif);
+    font-style: italic;
+    font-size: 0.85rem;
+    color: var(--gold);
+    letter-spacing: 0.15em;
+    margin-bottom: 1rem;
+  }
+
+  .diag h4 {
+    font-size: 1.4rem;
+    color: var(--cream);
+    margin-bottom: 0.75rem;
+    line-height: 1.15;
+  }
+
+  .diag p {
+    font-size: 0.88rem;
+    color: var(--text-muted);
+    line-height: 1.55;
+  }
+
+  /* --------------------- Slide 8: Treatment categories --------------------- */
+
+  .treatment-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin-top: 3rem;
+  }
+
+  .treatment {
+    background: linear-gradient(180deg, var(--black-2) 0%, var(--black) 100%);
+    border-top: 2px solid var(--gold);
+    padding: 2rem;
+  }
+
+  .treatment .cat {
+    font-size: 0.7rem;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 0.75rem;
+  }
+
+  .treatment h4 {
+    font-size: 1.4rem;
+    color: var(--cream);
+    margin-bottom: 1.25rem;
+    font-style: italic;
+  }
+
+  .treatment ul {
+    list-style: none;
+  }
+
+  .treatment ul li {
+    padding: 0.65rem 0;
+    color: var(--text);
+    font-size: 0.92rem;
+    border-bottom: 1px solid rgba(197, 162, 77, 0.1);
+    display: flex;
+    align-items: center;
+    gap: 0.65rem;
+  }
+  .treatment ul li:last-child { border-bottom: none; }
+  .treatment ul li::before {
+    content: '';
+    width: 4px;
+    height: 4px;
+    background: var(--gold);
+    border-radius: 50%;
+    flex-shrink: 0;
+  }
+
+  /* --------------------- Slide 9, 10: Case Study --------------------- */
+
+  .case-study .eyebrow {
+    color: var(--gold);
+  }
+
+  .case-headline {
+    font-family: var(--serif);
+    font-size: clamp(2rem, 3.5vw, 3rem);
+    color: var(--cream);
+    margin-bottom: 0.75rem;
+    line-height: 1.1;
+    font-weight: 500;
+  }
+  .case-headline em {
+    color: var(--gold-light);
+    font-style: italic;
+  }
+
+  .case-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    margin-top: 3rem;
+  }
+
+  .case-col h4 {
+    font-size: 0.78rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.75rem;
+    border-bottom: 1px solid var(--gold-line);
+    font-family: var(--sans);
+    font-weight: 600;
+  }
+
+  .case-col ul {
+    list-style: none;
+  }
+
+  .case-col li {
+    padding: 0.75rem 0;
+    color: var(--text);
+    font-size: 0.95rem;
+    line-height: 1.55;
+    display: flex;
+    gap: 0.75rem;
+    align-items: flex-start;
+  }
+
+  .case-col.before li::before {
+    content: '–';
+    color: var(--text-dim);
+    font-weight: 600;
+    flex-shrink: 0;
+    margin-top: 0;
+  }
+
+  .case-col.after li::before {
+    content: '↗';
+    color: var(--gold);
+    flex-shrink: 0;
+    font-size: 1rem;
+  }
+
+  .case-finding {
+    margin-top: 2rem;
+    padding: 1.5rem 1.75rem;
+    background: rgba(197, 162, 77, 0.08);
+    border-left: 3px solid var(--gold);
+  }
+  .case-finding .lbl {
+    font-size: 0.7rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+  }
+  .case-finding p {
+    font-family: var(--serif);
+    font-size: 1.1rem;
+    font-style: italic;
+    color: var(--cream);
+  }
+
+  .case-foundation {
+    margin-top: 1.5rem;
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    font-style: italic;
+  }
+  .case-foundation strong {
+    color: var(--gold);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-size: 0.7rem;
+    font-style: normal;
+    display: block;
+    margin-bottom: 0.5rem;
+  }
+
+  .case-takeaway {
+    margin-top: 3rem;
+    padding-top: 2rem;
+    border-top: 1px solid var(--gold-line);
+    font-family: var(--serif);
+    font-size: 1.4rem;
+    font-style: italic;
+    color: var(--gold-light);
+    text-align: center;
+  }
+
+  /* --------------------- Slide 11: Two clinics --------------------- */
+
+  .clinics-split {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0;
+    margin-top: 3rem;
+    border: 1px solid var(--gold-line);
+  }
+
+  .clinic-panel {
+    padding: 3rem 2.5rem;
+    position: relative;
+  }
+
+  .clinic-panel.mvc {
+    background: linear-gradient(180deg, #0a0a0a 0%, #141414 100%);
+    border-right: 1px solid var(--gold-line);
+  }
+
+  .clinic-panel.hvc {
+    background: #f1e8d6;
+    color: #1a1a1a;
+  }
+
+  .clinic-panel .logo-wrap {
+    width: 110px;
+    height: 110px;
+    margin-bottom: 1.5rem;
+  }
+
+  .clinic-panel .logo-wrap svg {
+    width: 100%;
+    height: 100%;
+  }
+
+  .clinic-panel .clinic-name {
+    font-family: var(--serif);
+    font-size: 1.85rem;
+    font-weight: 600;
+    margin-bottom: 0.25rem;
+    line-height: 1.1;
+  }
+
+  .clinic-panel.mvc .clinic-name { color: var(--cream); }
+  .clinic-panel.hvc .clinic-name { color: #1a1a1a; }
+
+  .clinic-panel .for {
+    font-family: var(--serif);
+    font-style: italic;
+    font-size: 1.05rem;
+    margin-bottom: 1.5rem;
+  }
+  .clinic-panel.mvc .for { color: var(--gold); }
+  .clinic-panel.hvc .for { color: #8a6f1c; }
+
+  .clinic-panel .desc {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 1.75rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid;
+  }
+  .clinic-panel.mvc .desc { color: var(--text); border-color: rgba(197, 162, 77, 0.2); }
+  .clinic-panel.hvc .desc { color: #3a3a3a; border-color: rgba(138, 111, 28, 0.3); }
+
+  .clinic-panel ul {
+    list-style: none;
+  }
+  .clinic-panel ul li {
+    padding: 0.55rem 0;
+    font-size: 0.95rem;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+  }
+  .clinic-panel ul li::before {
+    content: '';
+    width: 16px;
+    height: 1px;
+    background: currentColor;
+    opacity: 0.5;
+  }
+  .clinic-panel.mvc ul li { color: var(--cream); }
+  .clinic-panel.mvc ul li::before { background: var(--gold); opacity: 1; }
+  .clinic-panel.hvc ul li { color: #1a1a1a; }
+  .clinic-panel.hvc ul li::before { background: #8a6f1c; opacity: 1; }
+
+  .clinics-footer {
+    margin-top: 2.5rem;
+    text-align: center;
+    font-family: var(--serif);
+    font-style: italic;
+    font-size: 1.2rem;
+    color: var(--gold-light);
+  }
+
+  /* --------------------- Slide 12: ROI --------------------- */
+
+  .roi-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0;
+    margin-top: 3rem;
+  }
+
+  .roi {
+    padding: 3rem 2rem;
+    text-align: center;
+    border: 1px solid var(--gold-line);
+    margin-right: -1px;
+    background: var(--black);
+    position: relative;
+  }
+  .roi:nth-child(2) {
+    background: linear-gradient(180deg, rgba(197, 162, 77, 0.12) 0%, rgba(197, 162, 77, 0.02) 100%);
+  }
+
+  .roi .figure {
+    font-family: var(--serif);
+    font-size: clamp(3.5rem, 5.5vw, 5.5rem);
+    font-weight: 600;
+    background: linear-gradient(180deg, #e8c84a 0%, #c5a24d 60%, #9a7b2a 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    line-height: 1;
+    margin-bottom: 0.75rem;
+    letter-spacing: -0.02em;
+  }
+
+  .roi .label {
+    font-family: var(--serif);
+    font-size: 1.1rem;
+    color: var(--cream);
+    margin-bottom: 1rem;
+    font-style: italic;
+  }
+
+  .roi .source {
+    font-size: 0.78rem;
+    color: var(--text-muted);
+    line-height: 1.5;
+  }
+
+  .honesty-note {
+    margin-top: 3rem;
+    padding: 2rem 2.5rem;
+    background: var(--black-2);
+    border: 1px solid var(--gold-line);
+    border-left: 3px solid var(--gold);
+  }
+  .honesty-note .lbl {
+    font-family: var(--serif);
+    font-style: italic;
+    color: var(--gold);
+    font-size: 1rem;
+    margin-bottom: 0.75rem;
+  }
+  .honesty-note p {
+    font-family: var(--serif);
+    font-size: 1.1rem;
+    color: var(--text);
+    line-height: 1.55;
+  }
+
+  /* --------------------- Slide 13: Built for Realities --------------------- */
+
+  .reality-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.75rem;
+    margin-top: 3rem;
+  }
+
+  .reality {
+    background: var(--black-2);
+    border: 1px solid var(--gold-line);
+    padding: 2rem 2.25rem;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .reality::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 4px;
+    height: 100%;
+    background: linear-gradient(180deg, var(--gold) 0%, transparent 100%);
+  }
+
+  .reality h4 {
+    font-size: 1.35rem;
+    color: var(--gold-light);
+    margin-bottom: 0.85rem;
+    font-style: italic;
+  }
+
+  .reality p {
+    font-size: 0.95rem;
+    color: var(--text);
+    line-height: 1.55;
+  }
+
+  .reality-note {
+    margin-top: 2.5rem;
+    padding: 1.5rem 2rem;
+    text-align: center;
+    font-family: var(--serif);
+    font-size: 1.15rem;
+    font-style: italic;
+    color: var(--cream);
+    background: rgba(197, 162, 77, 0.06);
+    border-top: 1px solid var(--gold-line);
+    border-bottom: 1px solid var(--gold-line);
+  }
+  .reality-note strong { color: var(--gold-light); font-weight: 500; }
+
+  /* --------------------- Slide 14: Partnership Options --------------------- */
+
+  .options-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.75rem;
+    margin-top: 3rem;
+  }
+
+  .option {
+    background: linear-gradient(180deg, var(--black-2) 0%, var(--black) 100%);
+    border: 1px solid var(--gold-line);
+    padding: 2.25rem 2rem;
+    position: relative;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+  }
+  .option:hover {
+    transform: translateY(-4px);
+    border-color: var(--gold);
+  }
+
+  .option .opt-num {
+    position: absolute;
+    top: 1.5rem;
+    right: 2rem;
+    font-family: var(--serif);
+    font-style: italic;
+    font-size: 4rem;
+    color: rgba(197, 162, 77, 0.2);
+    line-height: 1;
+  }
+
+  .option .opt-tag {
+    font-size: 0.7rem;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+  }
+
+  .option h4 {
+    font-size: 1.5rem;
+    color: var(--cream);
+    margin-bottom: 1rem;
+    font-style: italic;
+  }
+
+  .option p {
+    font-size: 0.92rem;
+    color: var(--text);
+    line-height: 1.6;
+  }
+
+  .hsa-banner {
+    margin-top: 3rem;
+    padding: 2rem 2.5rem;
+    border: 1px solid var(--gold);
+    background: linear-gradient(135deg, rgba(197, 162, 77, 0.08) 0%, rgba(197, 162, 77, 0.02) 100%);
+  }
+
+  .hsa-banner .hsa-title {
+    font-size: 0.78rem;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 1rem;
+    font-weight: 600;
+  }
+
+  .hsa-list {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+  }
+
+  .hsa-list li {
+    color: var(--text);
+    font-size: 0.92rem;
+    display: flex;
+    gap: 0.75rem;
+    align-items: flex-start;
+    line-height: 1.5;
+  }
+
+  .hsa-list li::before {
+    content: '✓';
+    color: var(--gold);
+    font-weight: 600;
+    flex-shrink: 0;
+  }
+
+  /* --------------------- Slide 15: Closing --------------------- */
+
+  .slide-closing {
+    background:
+      radial-gradient(ellipse at center, rgba(197, 162, 77, 0.1) 0%, transparent 60%),
+      linear-gradient(180deg, #050505 0%, #0a0a0a 100%);
+    text-align: center;
+    align-items: center;
+    border-bottom: none;
+  }
+
+  .slide-closing .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .closing-eyebrow {
+    font-family: var(--sans);
+    font-size: 0.75rem;
+    font-weight: 500;
+    letter-spacing: 0.4em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 2rem;
+  }
+
+  .closing-headline {
+    font-family: var(--serif);
+    font-size: clamp(3rem, 6vw, 5.5rem);
+    line-height: 1.05;
+    margin-bottom: 0.5rem;
+    color: var(--cream);
+    font-weight: 500;
+  }
+
+  .closing-headline em {
+    font-style: italic;
+    background: linear-gradient(180deg, #e8c84a 0%, #c5a24d 60%, #9a7b2a 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .closing-divider {
+    width: 80px;
+    height: 1px;
+    background: var(--gold);
+    margin: 3rem auto;
+    position: relative;
+  }
+  .closing-divider::before,
+  .closing-divider::after {
+    content: '';
+    position: absolute;
+    top: -3.5px;
+    width: 8px;
+    height: 8px;
+    border: 1px solid var(--gold);
+    transform: rotate(45deg);
+  }
+  .closing-divider::before { left: -14px; }
+  .closing-divider::after { right: -14px; }
+
+  .next-steps-title {
+    font-size: 0.78rem;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 2rem;
+    font-weight: 600;
+  }
+
+  .next-steps {
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+    margin-bottom: 4rem;
+    flex-wrap: wrap;
+  }
+
+  .next-step {
+    max-width: 240px;
+    text-align: center;
+  }
+
+  .next-step .num-badge {
+    width: 44px;
+    height: 44px;
+    border: 1px solid var(--gold);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--serif);
+    font-style: italic;
+    color: var(--gold);
+    margin: 0 auto 1rem;
+    font-size: 1.1rem;
+  }
+
+  .next-step p {
+    font-family: var(--serif);
+    font-size: 1.1rem;
+    color: var(--cream);
+    line-height: 1.4;
+  }
+
+  .closing-contact {
+    border-top: 1px solid var(--gold-line);
+    padding-top: 2.5rem;
+    margin-top: 1rem;
+    width: 100%;
+    max-width: 700px;
+  }
+
+  .closing-contact .presenter {
+    font-family: var(--serif);
+    font-size: 1.4rem;
+    color: var(--cream);
+    margin-bottom: 0.5rem;
+  }
+
+  .closing-contact .meta {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    letter-spacing: 0.05em;
+  }
+
+  .closing-contact .meta span {
+    color: var(--gold);
+    margin: 0 0.75rem;
+  }
+
+  .clinics-footer-line {
+    margin-top: 1.5rem;
+    font-size: 0.78rem;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+  }
+  .clinics-footer-line span { color: var(--gold); }
+
+  /* --------------------- Reveal Animations --------------------- */
+
+  .reveal {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+  }
+  .reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .reveal-delay-1 { transition-delay: 0.05s; }
+  .reveal-delay-2 { transition-delay: 0.1s; }
+  .reveal-delay-3 { transition-delay: 0.15s; }
+  .reveal-delay-4 { transition-delay: 0.2s; }
+
+  /* --------------------- Print --------------------- */
+
+  @media print {
+    .slide { page-break-after: always; min-height: auto; padding: 2rem; }
+    .reveal { opacity: 1; transform: none; }
+    body { background: white; color: black; }
+  }
+
+  /* --------------------- Responsive --------------------- */
+
+  @media (max-width: 1024px) {
+    .slide { padding: 4rem 2.5rem; }
+    .slide-num { right: 2.5rem; }
+    .stat-grid { grid-template-columns: repeat(2, 1fr); }
+    .stat:nth-child(2) { border-right: none; }
+    .stat:nth-child(1), .stat:nth-child(2) { border-bottom: 1px solid var(--gold-line); }
+    .feature-grid, .diag-grid, .treatment-grid, .options-grid, .roi-grid { grid-template-columns: repeat(2, 1fr); }
+    .two-col, .case-grid, .compare-grid, .clinics-split, .cycle-wrap { grid-template-columns: 1fr; gap: 2rem; }
+    .reality-grid, .hsa-list { grid-template-columns: 1fr; }
+    .compare-col.standard, .clinic-panel.mvc { border-right: none; border-bottom: 1px solid var(--gold-line); }
+  }
+
+  @media (max-width: 640px) {
+    .slide { padding: 3rem 1.25rem; }
+    .slide-num { right: 1.25rem; top: 1.25rem; }
+    .stat-grid, .feature-grid, .diag-grid, .treatment-grid, .options-grid, .roi-grid { grid-template-columns: 1fr; }
+    .stat { border-right: none; border-bottom: 1px solid var(--gold-line); }
+    .stat:last-child { border-bottom: none; }
+    .clinic-row { gap: 2rem; }
+    .clinic-card { width: 180px; }
+    .badge-row { gap: 2rem; padding-top: 1.5rem; }
+    .next-steps { gap: 1.5rem; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ============== SLIDE 1: TITLE ============== -->
+<section class="slide slide-title" id="s1">
+  <div class="container reveal">
+    <div class="ornament"></div>
+    <div class="eyebrow gold">Comprehensive Wellness Initiative</div>
+    <h1>
+      <span class="row1">Protect</span>
+      <span class="row2 gold-text-grad">Them Project</span>
+    </h1>
+    <p class="subtitle">Health sovereignty for those who serve. A program built for first responders &amp; shift-based workers.</p>
+
+    <div class="clinic-row">
+      <div class="clinic-card dark">
+        <span class="corner tl"></span><span class="corner tr"></span>
+        <span class="corner bl"></span><span class="corner br"></span>
+        <!-- MVC Logo -->
+        <svg viewBox="0 0 1536 1024" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet">
+          <g transform="translate(0,1024) scale(0.1,-0.1)" fill="#C5A24D" stroke="none">
+            <path d="M7729 8022 c-20 -50 -286 -835 -362 -1067 -42 -126 -101 -311 -132 -410 -90 -288 -262 -818 -455 -1400 -285 -863 -290 -877 -306 -864 -8 6 -19 30 -24 53 -13 52 -127 422 -235 766 -46 146 -133 427 -194 625 -60 198 -168 550 -240 782 -71 232 -133 438 -136 456 -6 33 -5 35 37 52 160 64 298 102 498 136 114 20 170 23 360 23 199 0 242 -3 373 -27 81 -14 197 -41 258 -58 63 -18 114 -28 119 -23 8 9 96 274 102 309 3 16 -11 23 -97 47 -239 67 -426 97 -670 105 -326 10 -617 -34 -935 -142 -74 -25 -143 -48 -152 -52 -13 -4 -18 0 -18 12 0 22 -189 627 -198 637 -10 10 -219 -78 -362 -153 -199 -104 -358 -214 -560 -385 -114 -96 -319 -307 -412 -424 -128 -160 -283 -402 -362 -563 -87 -177 -136 -298 -199 -492 -77 -235 -119 -426 -143 -650 -19 -174 -26 -452 -14 -565 4 -47 11 -119 14 -160 8 -103 39 -275 71 -395 32 -121 99 -315 154 -448 91 -219 246 -489 388 -678 84 -110 297 -354 333 -381 23 -17 46 -18 279 -16 l254 3 -109 91 c-135 113 -324 307 -433 443 -273 343 -453 717 -555 1151 -42 178 -57 307 -63 525 -6 246 11 438 58 659 46 222 97 379 195 604 56 129 73 160 162 307 118 194 203 310 326 449 69 78 190 197 271 268 107 93 318 240 419 291 l50 25 46 -136 c70 -205 70 -182 -3 -233 -235 -163 -447 -362 -615 -578 -98 -126 -149 -207 -247 -396 -85 -163 -173 -388 -215 -548 -106 -398 -116 -848 -29 -1202 25 -99 81 -275 120 -372 65 -164 201 -407 308 -548 122 -162 282 -331 438 -463 145 -122 356 -251 553 -339 131 -57 380 -149 380 -139 0 2 -30 79 -66 172 -36 93 -71 184 -78 202 -10 29 -28 42 -116 89 -351 185 -559 348 -763 598 -179 219 -301 436 -386 692 -62 184 -87 306 -102 495 -9 113 -9 183 1 300 23 300 92 559 224 840 52 112 175 312 249 408 70 89 196 219 287 295 87 73 218 165 235 165 6 0 30 -60 54 -132 164 -509 455 -1429 577 -1828 52 -169 252 -801 411 -1300 31 -96 70 -222 88 -279 18 -57 34 -100 37 -95 3 5 11 27 18 49 7 22 52 150 100 285 49 135 120 344 160 465 39 121 134 407 210 635 146 437 403 1222 515 1575 94 292 221 674 227 681 7 7 152 -91 243 -165 167 -134 327 -311 438 -482 63 -99 131 -230 174 -339 31 -77 79 -236 85 -280 l3 -25 193 -3 c171 -2 192 -1 192 14 0 28 -39 168 -76 275 -87 251 -262 559 -448 789 -75 92 -248 266 -341 341 -39 31 -122 93 -185 137 -63 45 -123 88 -132 96 -16 14 -15 21 19 113 20 54 43 124 52 156 8 31 19 57 23 57 23 0 203 -101 311 -173 147 -99 235 -168 348 -274 176 -164 289 -297 412 -484 97 -148 182 -309 253 -484 69 -172 94 -245 133 -405 55 -224 73 -378 77 -650 3 -202 0 -271 -17 -395 -45 -343 -136 -638 -289 -932 -126 -244 -288 -467 -490 -677 -104 -108 -216 -205 -357 -310 -51 -37 -93 -69 -93 -70 0 0 127 0 282 2 l283 3 44 42 c46 45 243 257 276 298 11 13 38 47 61 74 121 147 326 489 379 635 8 19 34 84 59 144 46 110 98 268 135 409 42 160 72 379 80 583 4 110 7 222 5 249 -11 210 -16 270 -25 345 -45 370 -171 769 -348 1105 -83 158 -120 218 -210 344 -151 210 -332 406 -536 578 -129 109 -342 251 -522 347 -126 67 -198 101 -401 192 l-53 24 -10 -28z"/>
+            <path d="M8030 6373 c-12 -32 -35 -94 -50 -138 -16 -44 -47 -129 -70 -190 -23 -60 -88 -240 -145 -400 -57 -159 -129 -360 -160 -445 -31 -85 -83 -229 -115 -320 -32 -91 -114 -320 -183 -510 -69 -190 -151 -417 -182 -505 -31 -88 -72 -203 -91 -255 -20 -52 -63 -171 -96 -265 -94 -265 -458 -1256 -465 -1264 -13 -17 -52 84 -207 544 -96 286 -279 828 -406 1205 -128 377 -290 856 -360 1065 -179 530 -233 688 -350 1020 -56 160 -116 333 -134 385 -18 52 -37 95 -42 95 -11 -1 -90 -104 -181 -237 l-66 -97 63 -183 c34 -101 114 -331 177 -513 63 -181 135 -388 159 -460 25 -71 65 -186 89 -255 24 -69 67 -192 95 -275 29 -82 64 -186 80 -230 141 -400 985 -2898 1037 -3068 8 -26 18 -45 23 -42 5 3 14 22 21 43 6 20 47 134 91 252 120 323 296 795 328 880 29 77 104 286 232 645 68 192 268 736 405 1105 68 183 269 734 355 975 112 313 357 1019 390 1122 l20 62 -33 48 c-66 96 -193 263 -200 263 -4 0 -17 -26 -29 -57z"/>
+            <path d="M8560 4228 c0 -7 -29 -71 -64 -142 -67 -138 -160 -284 -254 -400 -87 -108 -246 -269 -347 -351 -132 -108 -323 -231 -471 -304 l-129 -64 -58 -161 c-32 -89 -68 -185 -79 -214 -11 -29 -19 -54 -17 -56 5 -5 196 60 294 99 89 36 260 119 350 172 173 101 385 273 551 447 132 137 210 234 313 388 82 123 200 349 254 488 20 52 37 98 37 103 0 4 -85 7 -190 7 -141 0 -190 -3 -190 -12z"/>
+          </g>
+        </svg>
+      </div>
+      <div class="clinic-card light">
+        <span class="corner tl"></span><span class="corner tr"></span>
+        <span class="corner bl"></span><span class="corner br"></span>
+        <!-- HVC Logo -->
+        <svg viewBox="0 0 1536 1024" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet">
+          <defs>
+            <linearGradient id="goldGrad1" x1="0%" y1="0%" x2="0%" y2="100%">
+              <stop offset="0%" style="stop-color:#D4AF37;stop-opacity:1" />
+              <stop offset="50%" style="stop-color:#C5A24D;stop-opacity:1" />
+              <stop offset="100%" style="stop-color:#9A7B2A;stop-opacity:1" />
+            </linearGradient>
+          </defs>
+          <g transform="translate(0,1024) scale(0.1,-0.1)" fill="url(#goldGrad1)" stroke="none">
+            <path d="M10115 7985 c-603 -76 -1073 -273 -1534 -641 -99 -80 -278 -261 -359 -364 -144 -184 -229 -319 -316 -502 -89 -185 -132 -300 -171 -454 -60 -231 -76 -361 -76 -619 0 -239 15 -371 62 -558 29 -115 69 -237 77 -237 4 0 32 44 62 97 30 53 61 103 69 111 12 12 12 26 -2 105 -27 143 -37 260 -37 412 0 229 24 410 84 625 19 69 51 168 71 220 91 233 229 474 373 655 77 95 187 212 307 323 148 137 387 303 561 390 85 42 292 127 336 137 l28 7 -18 -38 c-49 -105 -85 -171 -412 -749 -62 -110 -145 -258 -185 -330 -40 -71 -146 -260 -235 -420 -89 -159 -243 -436 -342 -615 -196 -354 -392 -703 -564 -1005 -37 -66 -101 -181 -143 -255 -41 -74 -104 -189 -141 -255 -197 -354 -378 -682 -429 -777 -14 -26 -28 -48 -31 -48 -3 0 -29 46 -57 103 -66 128 -269 498 -833 1517 -35 63 -94 169 -130 235 -58 105 -315 566 -618 1110 -52 93 -98 175 -102 180 -4 6 -24 42 -45 80 -21 39 -68 124 -105 190 -37 66 -186 332 -330 590 -145 259 -287 512 -317 563 l-54 92 -144 0 c-80 0 -145 -4 -145 -8 0 -4 4 -12 9 -18 5 -5 38 -63 74 -129 35 -66 117 -217 182 -335 65 -118 170 -309 233 -425 64 -115 148 -268 187 -340 39 -71 150 -274 247 -450 174 -317 222 -404 468 -850 69 -126 216 -392 324 -590 203 -368 608 -1094 655 -1175 15 -25 130 -230 255 -457 l229 -412 144 257 c79 141 177 316 217 387 202 359 310 553 382 687 43 82 81 148 84 148 3 0 20 -28 37 -63 47 -90 173 -278 259 -384 91 -113 256 -279 367 -368 91 -74 289 -207 413 -279 267 -154 683 -291 1043 -342 146 -21 536 -29 683 -15 311 30 630 109 893 221 137 58 222 102 340 173 185 113 329 223 483 371 232 224 401 453 546 743 45 89 77 168 121 296 l24 67 -158 0 -157 0 -18 -57 c-27 -85 -157 -351 -223 -457 -99 -157 -202 -286 -353 -437 -294 -296 -620 -499 -1011 -629 -227 -75 -522 -123 -764 -124 -162 0 -249 6 -390 30 -186 30 -302 61 -489 127 l-119 42 6 135 c9 188 41 320 102 426 29 50 90 106 147 135 132 68 277 80 643 54 386 -27 514 -29 650 -11 79 11 129 22 145 34 14 10 36 40 50 68 22 44 25 65 30 219 8 211 16 230 119 287 17 9 36 29 41 44 11 27 4 49 -33 105 l-18 26 45 34 c45 34 78 83 90 130 4 21 -4 42 -39 95 -33 50 -45 78 -45 105 0 33 12 50 105 153 57 64 111 129 120 146 20 39 19 95 -2 132 -10 16 -67 70 -126 120 -174 147 -250 247 -303 403 -25 75 -27 96 -35 325 -4 135 -15 286 -23 337 -18 104 -56 230 -95 318 -33 72 -117 208 -180 290 -25 33 -136 150 -246 260 -146 146 -217 226 -264 294 l-63 94 199 -6 c221 -7 348 -24 533 -68 244 -58 465 -149 700 -287 103 -61 258 -171 330 -235 98 -87 236 -226 304 -307 158 -188 277 -375 399 -629 l68 -144 142 7 c77 3 142 8 144 10 6 6 -42 126 -100 248 -157 332 -384 640 -640 867 -401 355 -873 587 -1379 675 -79 14 -190 30 -248 36 -137 14 -518 10 -645 -5z m139 -198 c6 -26 -7 -117 -23 -160 -23 -59 -82 -136 -172 -223 -52 -49 -136 -130 -187 -180 -52 -49 -114 -119 -138 -156 -25 -37 -59 -104 -75 -149 -23 -63 -30 -101 -32 -163 -1 -45 5 -105 13 -133 7 -29 11 -55 8 -59 -4 -3 -30 1 -60 9 -39 11 -76 13 -138 8 -47 -4 -96 -12 -108 -20 -50 -27 -45 -17 111 264 189 339 451 820 482 881 l30 62 80 16 c44 9 89 18 100 20 11 2 39 4 61 5 36 1 43 -2 48 -22z m140 -177 c27 -45 62 -118 78 -163 25 -69 30 -98 30 -182 1 -115 -16 -192 -68 -303 -18 -40 -54 -105 -80 -144 -57 -86 -199 -236 -297 -314 -40 -32 -94 -76 -121 -98 l-49 -40 -80 84 c-43 46 -87 103 -97 126 -11 24 -24 69 -30 102 -21 106 14 244 93 363 20 31 85 103 144 160 240 232 298 294 330 354 17 33 37 89 44 124 l12 64 21 -26 c12 -15 43 -63 70 -107z m233 -230 c65 -63 145 -145 179 -182 113 -124 225 -337 265 -502 21 -90 25 -220 8 -312 -29 -164 -107 -326 -218 -451 -42 -47 -83 -90 -92 -96 -11 -7 -33 2 -86 36 -39 25 -131 78 -204 118 -74 40 -181 99 -239 132 -110 62 -260 165 -260 178 0 14 100 129 222 257 135 141 213 248 268 364 57 124 74 195 74 328 1 108 -7 151 -41 240 -3 8 -3 13 0 10 3 -3 59 -57 124 -120z m-989 -871 c37 -8 58 -24 124 -91 43 -44 75 -84 70 -87 -4 -3 -53 -40 -108 -81 -114 -87 -293 -256 -365 -346 -76 -96 -152 -222 -203 -340 -61 -139 -89 -226 -115 -355 -32 -166 -42 -281 -37 -443 6 -184 38 -377 101 -605 25 -91 43 -167 40 -169 -2 -3 -8 4 -12 14 -9 26 -116 185 -173 259 -25 33 -72 98 -105 145 -33 47 -113 150 -179 230 -129 157 -169 229 -181 323 -4 32 -11 55 -15 50 -5 -4 -13 -31 -18 -60 -16 -91 18 -159 168 -338 106 -126 187 -235 254 -340 32 -49 71 -103 86 -120 34 -35 130 -192 130 -212 0 -11 -7 -11 -36 2 -40 16 -90 20 -98 6 -6 -10 30 -28 104 -51 50 -16 58 -23 92 -78 37 -60 122 -252 115 -259 -2 -2 -26 25 -53 59 -27 35 -98 114 -159 177 -121 125 -218 195 -475 341 -80 45 -197 113 -260 150 -140 82 -194 110 -215 110 -17 0 -20 11 -6 26 5 5 57 97 116 204 59 107 141 252 181 322 41 69 74 129 74 131 0 3 17 34 38 68 21 35 58 100 82 144 24 44 111 199 193 345 82 146 192 342 245 435 107 190 221 391 238 419 8 13 30 21 70 27 68 9 227 3 292 -12z m325 -154 c-19 -25 -33 -32 -33 -16 0 9 38 41 48 41 1 0 -5 -11 -15 -25z m1195 -416 c34 -127 112 -267 197 -352 27 -27 83 -76 124 -109 42 -33 88 -74 104 -91 31 -35 35 -78 13 -131 -8 -18 -54 -75 -102 -126 -49 -52 -105 -111 -126 -132 -20 -21 -30 -37 -22 -36 10 2 22 -19 38 -64 13 -36 32 -79 43 -95 37 -53 36 -58 -30 -127 -34 -35 -77 -72 -96 -81 -18 -9 -29 -20 -25 -25 5 -4 25 -13 45 -19 34 -11 59 -43 59 -76 0 -7 -20 -25 -44 -39 -55 -32 -92 -76 -106 -124 -5 -20 -13 -108 -17 -194 -5 -126 -10 -164 -24 -187 -10 -16 -27 -34 -37 -40 -45 -24 -154 102 -189 219 -11 35 -17 89 -17 150 1 80 6 110 33 190 56 165 146 290 209 290 15 0 52 -7 82 -15 69 -18 123 -20 118 -3 -6 17 -125 57 -170 58 -21 0 -38 3 -38 6 0 3 21 32 48 65 81 102 92 120 112 187 24 78 26 185 4 267 -18 70 -65 159 -123 231 -51 65 -158 139 -297 206 -60 28 -111 53 -113 55 -2 1 18 26 45 56 134 147 209 278 245 433 l24 99 7 -185 c4 -137 11 -205 26 -261z m-1258 351 c0 -5 -14 -33 -31 -62 -17 -29 -63 -115 -101 -192 -39 -77 -96 -178 -127 -225 -94 -139 -182 -289 -229 -391 -60 -128 -102 -295 -109 -436 -7 -128 5 -207 49 -333 l29 -83 -17 -107 c-14 -88 -15 -143 -10 -326 10 -309 10 -293 8 -469 -1 -88 -4 -157 -7 -155 -2 3 -27 79 -54 170 -27 90 -65 214 -84 274 -74 232 -120 419 -142 583 -14 98 -17 166 -12 335 4 162 10 236 27 312 50 234 158 485 278 645 76 103 248 271 388 380 108 84 144 104 144 80z m85 -59 c47 -45 214 -153 317 -206 106 -54 363 -199 393 -221 19 -14 19 -15 -10 -40 -70 -58 -310 -211 -415 -264 -75 -37 -218 -128 -343 -217 -64 -45 -121 -83 -126 -83 -4 0 -21 46 -36 103 -22 80 -29 130 -33 233 -3 97 0 153 12 212 20 100 86 293 130 381 40 80 69 131 76 131 2 0 18 -13 35 -29z m-297 -477 c-7 -21 -12 -104 -12 -184 0 -117 4 -162 22 -234 12 -49 31 -108 41 -131 l18 -41 -79 -80 c-113 -112 -211 -262 -248 -379 -7 -22 -16 -44 -20 -48 -11 -12 -27 41 -46 153 -11 66 -14 119 -10 175 13 160 58 320 131 465 40 82 205 353 211 347 2 -2 -2 -21 -8 -43z m1166 -105 c59 -74 109 -166 142 -264 20 -60 28 -107 32 -190 4 -92 1 -123 -17 -188 -42 -155 -131 -290 -278 -425 -103 -94 -252 -212 -270 -212 -21 0 -155 113 -278 236 -131 130 -219 251 -312 432 l-54 104 43 32 c65 50 213 147 308 203 346 205 434 259 505 312 l79 59 27 -21 c15 -12 48 -47 73 -78z m251 -68 c139 -105 226 -287 210 -438 -9 -89 -55 -174 -175 -323 -56 -69 -117 -153 -136 -187 -19 -34 -49 -101 -67 -150 -30 -82 -32 -97 -32 -223 0 -132 2 -143 40 -234 7 -15 2 -14 -33 8 -23 14 -112 81 -198 149 -218 170 -202 155 -183 167 108 64 336 279 405 383 60 89 109 200 130 296 33 145 4 332 -73 486 -29 56 -80 135 -118 182 -26 31 -24 30 74 -22 56 -29 126 -71 156 -94z m-1289 -553 c54 -109 131 -243 190 -333 61 -93 166 -192 302 -284 50 -35 92 -66 92 -70 0 -9 -157 -106 -215 -133 -39 -17 -67 -22 -130 -22 -103 1 -227 34 -329 87 -100 52 -208 156 -253 245 l-32 62 30 80 c38 106 71 169 131 257 43 62 156 183 172 183 3 0 22 -33 42 -72z m-353 -586 c95 -153 279 -262 514 -303 62 -11 65 -13 40 -22 -48 -16 -169 -86 -232 -134 -96 -74 -152 -146 -216 -278 -66 -138 -107 -269 -116 -372 -3 -40 -9 -70 -13 -68 -18 11 -32 231 -29 439 2 122 -1 307 -5 412 -7 141 -6 216 4 287 7 53 14 97 15 97 1 0 18 -26 38 -58z m-1208 -162 c50 -31 133 -80 185 -110 149 -84 369 -218 435 -265 85 -61 205 -175 274 -259 72 -87 143 -204 178 -288 26 -65 84 -250 80 -255 -2 -1 -46 20 -99 47 -128 64 -296 172 -423 270 -127 98 -344 306 -439 420 -90 108 -206 283 -281 425 -55 103 -56 108 -29 90 16 -10 70 -44 119 -75z m2340 -67 c140 -112 249 -192 383 -283 68 -46 90 -66 82 -74 -17 -17 -347 -13 -602 8 -154 12 -281 17 -395 14 -140 -4 -179 -8 -233 -27 -36 -12 -91 -37 -122 -56 l-57 -33 34 46 c53 74 123 136 218 196 117 73 181 96 265 96 37 0 121 7 187 16 68 9 140 12 167 9 48 -7 61 2 35 23 -24 20 -157 24 -262 8 -55 -8 -104 -11 -108 -7 -5 5 36 31 90 59 54 28 118 62 143 76 25 14 47 25 49 26 2 0 59 -44 126 -97z"/>
+            <path d="M8515 4420 c-9 -15 2 -28 38 -47 18 -9 49 -30 69 -48 43 -36 240 -145 264 -145 20 0 -66 74 -118 101 -20 10 -60 40 -89 66 -28 27 -63 56 -78 65 -29 20 -76 24 -86 8z"/>
+            <path d="M2137 7538 c-2 -178 -2 -694 -1 -1148 2 -454 3 -1438 4 -2187 l0 -1363 130 0 130 0 2 1198 3 1197 1543 -4 c948 -3 1542 -1 1542 5 0 5 -26 57 -58 114 l-58 105 -1487 -2 -1487 -2 0 1205 0 1204 -130 0 -129 0 -4 -322z"/>
+          </g>
+        </svg>
+      </div>
+    </div>
+
+    <p class="mission-line">Two clinics united by one mission: <strong>Health sovereignty for those who serve.</strong></p>
+
+    <div class="badge-row">
+      <div class="badge"><div class="num">100%</div><div class="lbl">Physician-Directed</div></div>
+      <div class="badge"><div class="num">24/7</div><div class="lbl">Support Access</div></div>
+    </div>
+
+    <div class="presented-to">Presented to the Police Wellness Committee</div>
+  </div>
+</section>
+
+<!-- ============== SLIDE 2: BUILT BY PHYSICIANS ============== -->
+<section class="slide" id="s2">
+  <span class="slide-num">02 / 15</span>
+  <div class="container">
+    <div class="reveal">
+      <div class="top-rule"></div>
+      <div class="eyebrow">Our Team &amp; Our Why</div>
+      <h2 class="title-l">Built by physicians<br><span class="gold-text-grad">who've been there.</span></h2>
+      <p class="lede">This program was built from lived experience — by and for the people it serves.</p>
+    </div>
+
+    <div class="two-col">
+      <div class="reveal reveal-delay-1">
+        <div class="title-m gold">Our Team</div>
+        <p class="body-text">Frontline-experienced physicians across the specialties that shift workers actually need.</p>
+        <ul class="specialty-list">
+          <li>Emergency Medicine</li>
+          <li>Primary Care</li>
+          <li>Women's Health</li>
+          <li>Obesity Medicine</li>
+          <li>Internal Medicine</li>
+        </ul>
+      </div>
+
+      <div class="reveal reveal-delay-2">
+        <div class="title-m gold">Our Why</div>
+        <div class="why-block">
+          <div class="quote-mark">"</div>
+          <p>This is personal.</p>
+          <p>We've worked the front lines. We've watched colleagues burn out, gain weight, lose sleep, and retire sick.</p>
+          <p>We don't aim to replace traditional care — we fill the gaps it can't cover.</p>
+          <p>This is for the protectors.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============== SLIDE 3: STATS ============== -->
+<section class="slide" id="s3">
+  <span class="slide-num">03 / 15</span>
+  <div class="container">
+    <div class="reveal">
+      <div class="top-rule"></div>
+      <div class="eyebrow">The Hidden Cost</div>
+      <h2 class="title-l">Shift work and policing<br>are <em class="gold-text-grad" style="font-style:italic;">silently destructive.</em></h2>
+      <p class="lede">A decade of evidence, across multiple populations, shows the same story.</p>
+    </div>
+
+    <div class="stat-grid reveal reveal-delay-1">
+      <div class="stat">
+        <div class="figure">+27%</div>
+        <div class="label">higher cardiovascular mortality</div>
+        <div class="desc">Night-shift workers; sudden cardiac death is the #1 on-duty cause among firefighters.</div>
+      </div>
+      <div class="stat">
+        <div class="figure">60%</div>
+        <div class="label">of officers have hypertension</div>
+        <div class="desc">Versus ~30% in the age-matched general population.</div>
+      </div>
+      <div class="stat">
+        <div class="figure">51%</div>
+        <div class="label">report poor sleep quality</div>
+        <div class="desc">40% of officers screen positive for a sleep disorder — most undiagnosed.</div>
+      </div>
+      <div class="stat">
+        <div class="figure">17%</div>
+        <div class="label">drop in self-rated health (12 yrs)</div>
+        <div class="desc">Buffalo BCOPS prospective study; metabolic syndrome rises ~10% over 7 years on the job.</div>
+      </div>
+    </div>
+
+    <p class="sources">Sources: BCOPS Prospective Study (Violanti et al.); JAMA officer sleep study (Rajaratnam et al.); IARC; multiple shift-worker meta-analyses (2015–2025).</p>
+  </div>
+</section>
+
+<!-- ============== SLIDE 4: VICIOUS CYCLE ============== -->
+<section class="slide" id="s4">
+  <span class="slide-num">04 / 15</span>
+  <div class="container">
+    <div class="reveal">
+      <div class="top-rule"></div>
+      <div class="eyebrow">The Compounding Loop</div>
+      <h2 class="title-l">These problems aren't separate.<br><em class="gold-text-grad" style="font-style:italic;">They feed each other.</em></h2>
+      <p class="lede">One root pattern drives most of what officers experience: chronic stress and shift work, compounding silently over years.</p>
+    </div>
+
+    <div class="cycle-wrap">
+      <div class="reveal reveal-delay-1">
+        <svg class="cycle-svg" viewBox="-30 -10 460 440" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <radialGradient id="centerGlow" cx="50%" cy="50%" r="50%">
+              <stop offset="0%" stop-color="#c5a24d" stop-opacity="0.3"/>
+              <stop offset="100%" stop-color="#c5a24d" stop-opacity="0"/>
+            </radialGradient>
+            <marker id="arrowhead" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto">
+              <polygon points="0 0, 8 4, 0 8" fill="#c5a24d"/>
+            </marker>
+          </defs>
+          <!-- glow -->
+          <circle cx="200" cy="200" r="180" fill="url(#centerGlow)"/>
+          <!-- main loop -->
+          <circle cx="200" cy="200" r="150" fill="none" stroke="#c5a24d" stroke-width="1" stroke-opacity="0.4" stroke-dasharray="3 5"/>
+          <!-- inner ring -->
+          <circle cx="200" cy="200" r="62" fill="#0a0a0a" stroke="#c5a24d" stroke-width="1.5"/>
+          <!-- center labels -->
+          <text x="200" y="195" text-anchor="middle" fill="#c5a24d" font-family="Cormorant Garamond, serif" font-style="italic" font-size="14">Chronic stress</text>
+          <text x="200" y="213" text-anchor="middle" fill="#c5a24d" font-family="Cormorant Garamond, serif" font-style="italic" font-size="14">&amp; shift work</text>
+          <!-- arrow path going around -->
+          <path d="M 200 50 A 150 150 0 0 1 330 200" fill="none" stroke="#c5a24d" stroke-width="2" marker-end="url(#arrowhead)"/>
+          <path d="M 330 200 A 150 150 0 0 1 200 350" fill="none" stroke="#c5a24d" stroke-width="2" marker-end="url(#arrowhead)"/>
+          <path d="M 200 350 A 150 150 0 0 1 70 200" fill="none" stroke="#c5a24d" stroke-width="2" marker-end="url(#arrowhead)"/>
+          <path d="M 70 200 A 150 150 0 0 1 200 50" fill="none" stroke="#c5a24d" stroke-width="2" marker-end="url(#arrowhead)"/>
+          <!-- node dots -->
+          <circle cx="200" cy="50" r="6" fill="#c5a24d"/>
+          <circle cx="350" cy="200" r="6" fill="#c5a24d"/>
+          <circle cx="200" cy="350" r="6" fill="#c5a24d"/>
+          <circle cx="50" cy="200" r="6" fill="#c5a24d"/>
+          <!-- node labels -->
+          <text x="200" y="32" text-anchor="middle" fill="#ebe3d4" font-family="Inter, sans-serif" font-size="13" font-weight="500">Metabolic Syndrome</text>
+          <text x="350" y="232" text-anchor="middle" fill="#ebe3d4" font-family="Inter, sans-serif" font-size="13" font-weight="500">Hormone Decline</text>
+          <text x="200" y="380" text-anchor="middle" fill="#ebe3d4" font-family="Inter, sans-serif" font-size="13" font-weight="500">Reduced Performance</text>
+          <text x="50" y="232" text-anchor="middle" fill="#ebe3d4" font-family="Inter, sans-serif" font-size="13" font-weight="500">Poor Sleep</text>
+        </svg>
+      </div>
+
+      <div class="cycle-nodes reveal reveal-delay-2">
+        <div class="node">
+          <div class="n">i.</div>
+          <h4>Metabolic Syndrome</h4>
+          <p>↑ insulin · ↑ visceral fat</p>
+        </div>
+        <div class="node">
+          <div class="n">ii.</div>
+          <h4>Hormone Decline</h4>
+          <p>↓ testosterone · ↓ recovery</p>
+        </div>
+        <div class="node">
+          <div class="n">iii.</div>
+          <h4>Poor Sleep &amp; Fatigue</h4>
+          <p>OSA · brain fog</p>
+        </div>
+        <div class="node">
+          <div class="n">iv.</div>
+          <h4>Injury &amp; Chronic Pain</h4>
+          <p>↓ fitness · ↑ time off</p>
+        </div>
+        <div class="node center">
+          <div class="n">Outcome</div>
+          <h4>Reduced Performance</h4>
+          <p>weight gain · low mood · early retirement</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="closing-emphasis reveal reveal-delay-3">
+      Treating one symptom at a time is why standard care fails. <strong>We target the loop.</strong>
+    </div>
+  </div>
+</section>
+
+<!-- ============== SLIDE 5: COMPARISON ============== -->
+<section class="slide" id="s5">
+  <span class="slide-num">05 / 15</span>
+  <div class="container">
+    <div class="reveal">
+      <div class="top-rule"></div>
+      <div class="eyebrow">A Different Standard of Care</div>
+      <h2 class="title-l">Why a yearly physical<br><em class="gold-text-grad" style="font-style:italic;">isn't catching this.</em></h2>
+      <p class="lede">Standard care looks at outcomes after they happen. We look at trajectory.</p>
+    </div>
+
+    <div class="compare-grid reveal reveal-delay-1">
+      <div class="compare-col standard">
+        <div class="compare-tag">Approach 01</div>
+        <h3>Standard Annual Physical</h3>
+        <p class="compare-sub">Sees the symptoms — once they exist.</p>
+        <ul class="compare-list">
+          <li>BMI and blood pressure</li>
+          <li>Standard cholesterol panel</li>
+          <li>Fasting glucose (catches diabetes after it has developed)</li>
+          <li>Sleep, hormones, body composition rarely tested</li>
+          <li>10–15 min visit, no follow-through</li>
+        </ul>
+      </div>
+      <div class="compare-col ours">
+        <div class="compare-tag">Approach 02</div>
+        <h3>Protect Them Project</h3>
+        <p class="compare-sub">Sees the trajectory — and changes it.</p>
+        <ul class="compare-list">
+          <li>Visceral fat &amp; lean muscle (DEXA)</li>
+          <li>Cardio fitness via VO₂ max — predicts injury &amp; longevity</li>
+          <li>Real-time glucose response (CGM) — catches insulin resistance years early</li>
+          <li>Hormones, thyroid, sleep apnea screening</li>
+          <li>Advanced imaging when indicated (Full Body MRI, Coronary CT)</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============== SLIDE 6: PROGRAM FEATURES ============== -->
+<section class="slide" id="s6">
+  <span class="slide-num">06 / 15</span>
+  <div class="container">
+    <div class="reveal">
+      <div class="top-rule"></div>
+      <div class="eyebrow">The Program</div>
+      <h2 class="title-l">What's in the program.</h2>
+      <p class="lede">A concierge medical model — built around the realities of shift work.</p>
+    </div>
+
+    <div class="feature-grid">
+      <div class="feature reveal reveal-delay-1">
+        <div class="icon-wrap">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M19 14l-7 7m0 0l-7-7m7 7V3"/></svg>
+        </div>
+        <h4>4–6 Physician Visits / Yr</h4>
+        <p>Regular check-ins with a dedicated physician who actually knows the officer.</p>
+      </div>
+      <div class="feature reveal reveal-delay-2">
+        <div class="icon-wrap">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="5" y="2" width="14" height="20" rx="2"/><line x1="12" y1="18" x2="12" y2="18"/></svg>
+        </div>
+        <h4>Mobile Lab Review</h4>
+        <p>Comprehensive results delivered and explained on mobile — no clinic trips required.</p>
+      </div>
+      <div class="feature reveal reveal-delay-3">
+        <div class="icon-wrap">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/></svg>
+        </div>
+        <h4>Personalized Care Plan</h4>
+        <p>DEXA, VO₂, CGM, and labs feed a plan tuned to each officer's data.</p>
+      </div>
+      <div class="feature reveal reveal-delay-1">
+        <div class="icon-wrap">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M17 20h5v-2a4 4 0 00-3-3.87M9 20H4v-2a4 4 0 013-3.87M16 3.13a4 4 0 010 7.75M12 7a4 4 0 11-8 0 4 4 0 018 0z"/></svg>
+        </div>
+        <h4>Group or Individual Visits</h4>
+        <p>Officers can opt into peer cohorts or stay 1-on-1 — their choice.</p>
+      </div>
+      <div class="feature reveal reveal-delay-2">
+        <div class="icon-wrap">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        </div>
+        <h4>Health Navigator</h4>
+        <p>Dedicated coordinator handles scheduling, follow-up, and logistics.</p>
+      </div>
+      <div class="feature reveal reveal-delay-3">
+        <div class="icon-wrap">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg>
+        </div>
+        <h4>Ongoing Support</h4>
+        <p>Secure messaging with the care team; coaching for nutrition, sleep, fitness.</p>
+      </div>
+    </div>
+
+    <p class="feature-footer reveal reveal-delay-4">Designed for compliance — because programs that ignore shift work fail.</p>
+  </div>
+</section>
+
+<!-- ============== SLIDE 7: DIAGNOSTICS ============== -->
+<section class="slide" id="s7">
+  <span class="slide-num">07 / 15</span>
+  <div class="container">
+    <div class="reveal">
+      <div class="top-rule"></div>
+      <div class="eyebrow">Diagnostics</div>
+      <h2 class="title-l">How we measure<br><em class="gold-text-grad" style="font-style:italic;">what matters.</em></h2>
+      <p class="lede">Six diagnostic inputs that build a complete picture — far beyond a standard physical.</p>
+    </div>
+
+    <div class="diag-grid">
+      <div class="diag reveal reveal-delay-1">
+        <div class="num">i.</div>
+        <h4>DEXA</h4>
+        <p>Body fat %, lean mass, visceral fat, bone density.</p>
+      </div>
+      <div class="diag reveal reveal-delay-1">
+        <div class="num">ii.</div>
+        <h4>VO₂ Max Testing</h4>
+        <p>Cardiovascular fitness — strongest single predictor of longevity.</p>
+      </div>
+      <div class="diag reveal reveal-delay-1">
+        <div class="num">iii.</div>
+        <h4>Continuous Glucose Monitor</h4>
+        <p>Real-time metabolic data; catches insulin resistance early.</p>
+      </div>
+      <div class="diag reveal reveal-delay-2">
+        <div class="num">iv.</div>
+        <h4>Full Body MRI</h4>
+        <p>Whole-body screening for early detection of cancer &amp; disease.</p>
+      </div>
+      <div class="diag reveal reveal-delay-2">
+        <div class="num">v.</div>
+        <h4>Coronary CT</h4>
+        <p>Direct imaging of heart arteries — catches disease silent on standard labs.</p>
+      </div>
+      <div class="diag reveal reveal-delay-2">
+        <div class="num">vi.</div>
+        <h4>Comprehensive Labs</h4>
+        <p>Hormones, thyroid, full metabolic panel, inflammation, micronutrients.</p>
+      </div>
+    </div>
+
+    <p class="feature-footer reveal reveal-delay-3">Tracked over time — officers see their own trajectory and can act on it.</p>
+  </div>
+</section>
+
+<!-- ============== SLIDE 8: TREATMENT ============== -->
+<section class="slide" id="s8">
+  <span class="slide-num">08 / 15</span>
+  <div class="container">
+    <div class="reveal">
+      <div class="top-rule"></div>
+      <div class="eyebrow">Treatment Modalities</div>
+      <h2 class="title-l">How we treat<br><em class="gold-text-grad" style="font-style:italic;">what we find.</em></h2>
+      <p class="lede">All physician-prescribed. All biomarker-driven. Tailored to each officer.</p>
+    </div>
+
+    <div class="treatment-grid">
+      <div class="treatment reveal reveal-delay-1">
+        <div class="cat">Medical Optimization</div>
+        <h4>Prescribed therapies</h4>
+        <ul>
+          <li>Hormone optimization (when clinically indicated)</li>
+          <li>GLP-1 medications for weight management</li>
+          <li>Thyroid support</li>
+          <li>Targeted micronutrient correction</li>
+        </ul>
+      </div>
+      <div class="treatment reveal reveal-delay-2">
+        <div class="cat">Recovery &amp; Performance</div>
+        <h4>Adjunct therapies</h4>
+        <ul>
+          <li>IV / IM nutrient therapy</li>
+          <li>Peptide therapies</li>
+          <li>Red light &amp; hyperbaric oxygen</li>
+          <li>Sauna / cold-plunge protocols</li>
+        </ul>
+      </div>
+      <div class="treatment reveal reveal-delay-3">
+        <div class="cat">Movement &amp; Bodywork</div>
+        <h4>Hands-on care</h4>
+        <ul>
+          <li>Registered massage therapy (RMT)</li>
+          <li>Physical therapy &amp; rehab</li>
+          <li>Strength &amp; Zone 2 programming</li>
+          <li>Sleep &amp; stress protocols</li>
+        </ul>
+      </div>
+    </div>
+
+    <p class="feature-footer reveal reveal-delay-4">Therapies are offered only when biomarkers, symptoms, and clinical guidelines support them.</p>
+  </div>
+</section>
+
+<!-- ============== SLIDE 9: CASE STUDY 1 ============== -->
+<section class="slide case-study" id="s9">
+  <span class="slide-num">09 / 15</span>
+  <div class="container">
+    <div class="reveal">
+      <div class="top-rule"></div>
+      <div class="eyebrow">Case Study · 01</div>
+      <h2 class="case-headline">50-year-old male constable.<br><em>Past his prime — or so he thought.</em></h2>
+    </div>
+
+    <div class="case-grid">
+      <div class="case-col before reveal reveal-delay-1">
+        <h4>What he presented with</h4>
+        <ul>
+          <li>Couldn't lose weight despite trying for years</li>
+          <li>Brain fog, low energy, muscle aches</li>
+          <li>Hot flashes, declining strength</li>
+          <li>Felt "past his prime"</li>
+          <li>On a trajectory toward diabetes</li>
+        </ul>
+
+        <div class="case-finding">
+          <div class="lbl">What we found that no one had connected</div>
+          <p>High visceral fat · Insulin nearly 3× normal · Pre-diabetic A1c (5.8%) · Low testosterone · Undiagnosed sleep apnea</p>
+        </div>
+      </div>
+
+      <div class="case-col after reveal reveal-delay-2">
+        <h4>4 months later</h4>
+        <ul>
+          <li>Down 10 lb (on track for 40 lb goal)</li>
+          <li>A1c 5.8 → 5.4 (out of pre-diabetic range)</li>
+          <li>Fasting insulin substantially improved</li>
+          <li>Testosterone restored to normal range</li>
+          <li>Sleep apnea diagnosed &amp; treated; brain fog gone</li>
+          <li>Energy, strength, mood all returning</li>
+        </ul>
+
+        <p class="case-foundation">
+          <strong>Foundation</strong>
+          Zone 2 + gym training · dietitian-led nutrition · repeat DEXA shows fat down, lean mass preserved.
+        </p>
+      </div>
+    </div>
+
+    <p class="case-takeaway reveal reveal-delay-3">Trajectory changed: from "early disability retirement" to "finishing his career strong."</p>
+  </div>
+</section>
+
+<!-- ============== SLIDE 10: CASE STUDY 2 ============== -->
+<section class="slide case-study" id="s10">
+  <span class="slide-num">10 / 15</span>
+  <div class="container">
+    <div class="reveal">
+      <div class="top-rule"></div>
+      <div class="eyebrow">Case Study · 02</div>
+      <h2 class="case-headline">36-year-old male officer.<br><em>New dad, back injury, night shifts.</em></h2>
+    </div>
+
+    <div class="case-grid">
+      <div class="case-col before reveal reveal-delay-1">
+        <h4>Where he started</h4>
+        <ul>
+          <li>Recent back injury, struggling to recover</li>
+          <li>Newborn at home — sleep destroyed</li>
+          <li>Rotating night shifts driving poor habits</li>
+          <li>Weight up 40 lb to a peak of 306 lb</li>
+          <li>Wanted to qualify for a more active assignment — but his body wasn't there</li>
+        </ul>
+      </div>
+
+      <div class="case-col after reveal reveal-delay-2">
+        <h4>Where he is now</h4>
+        <ul>
+          <li>Down 22 lb (306 → 284 lb) and still trending</li>
+          <li>Visceral fat measurably reduced on DEXA</li>
+          <li>Lean muscle mass <strong style="color:var(--gold-light);">UP</strong> — not just weight loss</li>
+          <li>Back pain managed; back to structured training</li>
+          <li>Actively training toward his target role</li>
+        </ul>
+      </div>
+    </div>
+
+    <p class="case-takeaway reveal reveal-delay-3">From injury and stalled career to actively training for advancement.</p>
+  </div>
+</section>
+
+<!-- ============== SLIDE 11: TWO CLINICS ============== -->
+<section class="slide" id="s11">
+  <span class="slide-num">11 / 15</span>
+  <div class="container">
+    <div class="reveal">
+      <div class="top-rule"></div>
+      <div class="eyebrow">One Mission · Two Clinics</div>
+      <h2 class="title-l">One mission.<br><em class="gold-text-grad" style="font-style:italic;">Two specialized clinics.</em></h2>
+      <p class="lede">Whole teams deserve whole care. Officers — male and female — get a program tuned to their physiology.</p>
+    </div>
+
+    <div class="clinics-split reveal reveal-delay-1">
+      <div class="clinic-panel mvc">
+        <div class="logo-wrap">
+          <svg viewBox="0 0 1536 1024" xmlns="http://www.w3.org/2000/svg">
+            <g transform="translate(0,1024) scale(0.1,-0.1)" fill="#C5A24D" stroke="none">
+              <path d="M7729 8022 c-20 -50 -286 -835 -362 -1067 -42 -126 -101 -311 -132 -410 -90 -288 -262 -818 -455 -1400 -285 -863 -290 -877 -306 -864 -8 6 -19 30 -24 53 -13 52 -127 422 -235 766 -46 146 -133 427 -194 625 -60 198 -168 550 -240 782 -71 232 -133 438 -136 456 -6 33 -5 35 37 52 160 64 298 102 498 136 114 20 170 23 360 23 199 0 242 -3 373 -27 81 -14 197 -41 258 -58 63 -18 114 -28 119 -23 8 9 96 274 102 309 3 16 -11 23 -97 47 -239 67 -426 97 -670 105 -326 10 -617 -34 -935 -142 -74 -25 -143 -48 -152 -52 -13 -4 -18 0 -18 12 0 22 -189 627 -198 637 -10 10 -219 -78 -362 -153 -199 -104 -358 -214 -560 -385 -114 -96 -319 -307 -412 -424 -128 -160 -283 -402 -362 -563 -87 -177 -136 -298 -199 -492 -77 -235 -119 -426 -143 -650 -19 -174 -26 -452 -14 -565 4 -47 11 -119 14 -160 8 -103 39 -275 71 -395 32 -121 99 -315 154 -448 91 -219 246 -489 388 -678 84 -110 297 -354 333 -381 23 -17 46 -18 279 -16 l254 3 -109 91 c-135 113 -324 307 -433 443 -273 343 -453 717 -555 1151 -42 178 -57 307 -63 525 -6 246 11 438 58 659 46 222 97 379 195 604 56 129 73 160 162 307 118 194 203 310 326 449 69 78 190 197 271 268 107 93 318 240 419 291 l50 25 46 -136 c70 -205 70 -182 -3 -233 -235 -163 -447 -362 -615 -578 -98 -126 -149 -207 -247 -396 -85 -163 -173 -388 -215 -548 -106 -398 -116 -848 -29 -1202 25 -99 81 -275 120 -372 65 -164 201 -407 308 -548 122 -162 282 -331 438 -463 145 -122 356 -251 553 -339 131 -57 380 -149 380 -139 0 2 -30 79 -66 172 -36 93 -71 184 -78 202 -10 29 -28 42 -116 89 -351 185 -559 348 -763 598 -179 219 -301 436 -386 692 -62 184 -87 306 -102 495 -9 113 -9 183 1 300 23 300 92 559 224 840 52 112 175 312 249 408 70 89 196 219 287 295 87 73 218 165 235 165 6 0 30 -60 54 -132 164 -509 455 -1429 577 -1828 52 -169 252 -801 411 -1300 31 -96 70 -222 88 -279 18 -57 34 -100 37 -95 3 5 11 27 18 49 7 22 52 150 100 285 49 135 120 344 160 465 39 121 134 407 210 635 146 437 403 1222 515 1575 94 292 221 674 227 681 7 7 152 -91 243 -165 167 -134 327 -311 438 -482 63 -99 131 -230 174 -339 31 -77 79 -236 85 -280 l3 -25 193 -3 c171 -2 192 -1 192 14 0 28 -39 168 -76 275 -87 251 -262 559 -448 789 -75 92 -248 266 -341 341 -39 31 -122 93 -185 137 -63 45 -123 88 -132 96 -16 14 -15 21 19 113 20 54 43 124 52 156 8 31 19 57 23 57 23 0 203 -101 311 -173 147 -99 235 -168 348 -274 176 -164 289 -297 412 -484 97 -148 182 -309 253 -484 69 -172 94 -245 133 -405 55 -224 73 -378 77 -650 3 -202 0 -271 -17 -395 -45 -343 -136 -638 -289 -932 -126 -244 -288 -467 -490 -677 -104 -108 -216 -205 -357 -310 -51 -37 -93 -69 -93 -70 0 0 127 0 282 2 l283 3 44 42 c46 45 243 257 276 298 11 13 38 47 61 74 121 147 326 489 379 635 8 19 34 84 59 144 46 110 98 268 135 409 42 160 72 379 80 583 4 110 7 222 5 249 -11 210 -16 270 -25 345 -45 370 -171 769 -348 1105 -83 158 -120 218 -210 344 -151 210 -332 406 -536 578 -129 109 -342 251 -522 347 -126 67 -198 101 -401 192 l-53 24 -10 -28z"/>
+              <path d="M8030 6373 c-12 -32 -35 -94 -50 -138 -16 -44 -47 -129 -70 -190 -23 -60 -88 -240 -145 -400 -57 -159 -129 -360 -160 -445 -31 -85 -83 -229 -115 -320 -32 -91 -114 -320 -183 -510 -69 -190 -151 -417 -182 -505 -31 -88 -72 -203 -91 -255 -20 -52 -63 -171 -96 -265 -94 -265 -458 -1256 -465 -1264 -13 -17 -52 84 -207 544 -96 286 -279 828 -406 1205 -128 377 -290 856 -360 1065 -179 530 -233 688 -350 1020 -56 160 -116 333 -134 385 -18 52 -37 95 -42 95 -11 -1 -90 -104 -181 -237 l-66 -97 63 -183 c34 -101 114 -331 177 -513 63 -181 135 -388 159 -460 25 -71 65 -186 89 -255 24 -69 67 -192 95 -275 29 -82 64 -186 80 -230 141 -400 985 -2898 1037 -3068 8 -26 18 -45 23 -42 5 3 14 22 21 43 6 20 47 134 91 252 120 323 296 795 328 880 29 77 104 286 232 645 68 192 268 736 405 1105 68 183 269 734 355 975 112 313 357 1019 390 1122 l20 62 -33 48 c-66 96 -193 263 -200 263 -4 0 -17 -26 -29 -57z"/>
+              <path d="M8560 4228 c0 -7 -29 -71 -64 -142 -67 -138 -160 -284 -254 -400 -87 -108 -246 -269 -347 -351 -132 -108 -323 -231 -471 -304 l-129 -64 -58 -161 c-32 -89 -68 -185 -79 -214 -11 -29 -19 -54 -17 -56 5 -5 196 60 294 99 89 36 260 119 350 172 173 101 385 273 551 447 132 137 210 234 313 388 82 123 200 349 254 488 20 52 37 98 37 103 0 4 -85 7 -190 7 -141 0 -190 -3 -190 -12z"/>
+            </g>
+          </svg>
+        </div>
+        <div class="clinic-name">Men's Vitality Clinic</div>
+        <div class="for">— For male officers</div>
+        <p class="desc">Focused on testosterone optimization, metabolic health, cardiovascular fitness, and performance recovery.</p>
+        <ul>
+          <li>Hormone optimization</li>
+          <li>Athletic performance</li>
+          <li>Metabolic health</li>
+          <li>Cardiovascular screening</li>
+        </ul>
+      </div>
+
+      <div class="clinic-panel hvc">
+        <div class="logo-wrap">
+          <svg viewBox="0 0 1536 1024" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <linearGradient id="goldGrad2" x1="0%" y1="0%" x2="0%" y2="100%">
+                <stop offset="0%" style="stop-color:#c5a24d;stop-opacity:1" />
+                <stop offset="50%" style="stop-color:#a87f1e;stop-opacity:1" />
+                <stop offset="100%" style="stop-color:#7a5d18;stop-opacity:1" />
+              </linearGradient>
+            </defs>
+            <g transform="translate(0,1024) scale(0.1,-0.1)" fill="url(#goldGrad2)" stroke="none">
+              <path d="M10115 7985 c-603 -76 -1073 -273 -1534 -641 -99 -80 -278 -261 -359 -364 -144 -184 -229 -319 -316 -502 -89 -185 -132 -300 -171 -454 -60 -231 -76 -361 -76 -619 0 -239 15 -371 62 -558 29 -115 69 -237 77 -237 4 0 32 44 62 97 30 53 61 103 69 111 12 12 12 26 -2 105 -27 143 -37 260 -37 412 0 229 24 410 84 625 19 69 51 168 71 220 91 233 229 474 373 655 77 95 187 212 307 323 148 137 387 303 561 390 85 42 292 127 336 137 l28 7 -18 -38 c-49 -105 -85 -171 -412 -749 -62 -110 -145 -258 -185 -330 -40 -71 -146 -260 -235 -420 -89 -159 -243 -436 -342 -615 -196 -354 -392 -703 -564 -1005 -37 -66 -101 -181 -143 -255 -41 -74 -104 -189 -141 -255 -197 -354 -378 -682 -429 -777 -14 -26 -28 -48 -31 -48 -3 0 -29 46 -57 103 -66 128 -269 498 -833 1517 -35 63 -94 169 -130 235 -58 105 -315 566 -618 1110 -52 93 -98 175 -102 180 -4 6 -24 42 -45 80 -21 39 -68 124 -105 190 -37 66 -186 332 -330 590 -145 259 -287 512 -317 563 l-54 92 -144 0 c-80 0 -145 -4 -145 -8 0 -4 4 -12 9 -18 5 -5 38 -63 74 -129 35 -66 117 -217 182 -335 65 -118 170 -309 233 -425 64 -115 148 -268 187 -340 39 -71 150 -274 247 -450 174 -317 222 -404 468 -850 69 -126 216 -392 324 -590 203 -368 608 -1094 655 -1175 15 -25 130 -230 255 -457 l229 -412 144 257 c79 141 177 316 217 387 202 359 310 553 382 687 43 82 81 148 84 148 3 0 20 -28 37 -63 47 -90 173 -278 259 -384 91 -113 256 -279 367 -368 91 -74 289 -207 413 -279 267 -154 683 -291 1043 -342 146 -21 536 -29 683 -15 311 30 630 109 893 221 137 58 222 102 340 173 185 113 329 223 483 371 232 224 401 453 546 743 45 89 77 168 121 296 l24 67 -158 0 -157 0 -18 -57 c-27 -85 -157 -351 -223 -457 -99 -157 -202 -286 -353 -437 -294 -296 -620 -499 -1011 -629 -227 -75 -522 -123 -764 -124 -162 0 -249 6 -390 30 -186 30 -302 61 -489 127 l-119 42 6 135 c9 188 41 320 102 426 29 50 90 106 147 135 132 68 277 80 643 54 386 -27 514 -29 650 -11 79 11 129 22 145 34 14 10 36 40 50 68 22 44 25 65 30 219 8 211 16 230 119 287 17 9 36 29 41 44 11 27 4 49 -33 105 l-18 26 45 34 c45 34 78 83 90 130 4 21 -4 42 -39 95 -33 50 -45 78 -45 105 0 33 12 50 105 153 57 64 111 129 120 146 20 39 19 95 -2 132 -10 16 -67 70 -126 120 -174 147 -250 247 -303 403 -25 75 -27 96 -35 325 -4 135 -15 286 -23 337 -18 104 -56 230 -95 318 -33 72 -117 208 -180 290 -25 33 -136 150 -246 260 -146 146 -217 226 -264 294 l-63 94 199 -6 c221 -7 348 -24 533 -68 244 -58 465 -149 700 -287 103 -61 258 -171 330 -235 98 -87 236 -226 304 -307 158 -188 277 -375 399 -629 l68 -144 142 7 c77 3 142 8 144 10 6 6 -42 126 -100 248 -157 332 -384 640 -640 867 -401 355 -873 587 -1379 675 -79 14 -190 30 -248 36 -137 14 -518 10 -645 -5z m139 -198 c6 -26 -7 -117 -23 -160 -23 -59 -82 -136 -172 -223 -52 -49 -136 -130 -187 -180 -52 -49 -114 -119 -138 -156 -25 -37 -59 -104 -75 -149 -23 -63 -30 -101 -32 -163 -1 -45 5 -105 13 -133 7 -29 11 -55 8 -59 -4 -3 -30 1 -60 9 -39 11 -76 13 -138 8 -47 -4 -96 -12 -108 -20 -50 -27 -45 -17 111 264 189 339 451 820 482 881 l30 62 80 16 c44 9 89 18 100 20 11 2 39 4 61 5 36 1 43 -2 48 -22z m140 -177 c27 -45 62 -118 78 -163 25 -69 30 -98 30 -182 1 -115 -16 -192 -68 -303 -18 -40 -54 -105 -80 -144 -57 -86 -199 -236 -297 -314 -40 -32 -94 -76 -121 -98 l-49 -40 -80 84 c-43 46 -87 103 -97 126 -11 24 -24 69 -30 102 -21 106 14 244 93 363 20 31 85 103 144 160 240 232 298 294 330 354 17 33 37 89 44 124 l12 64 21 -26 c12 -15 43 -63 70 -107z m233 -230 c65 -63 145 -145 179 -182 113 -124 225 -337 265 -502 21 -90 25 -220 8 -312 -29 -164 -107 -326 -218 -451 -42 -47 -83 -90 -92 -96 -11 -7 -33 2 -86 36 -39 25 -131 78 -204 118 -74 40 -181 99 -239 132 -110 62 -260 165 -260 178 0 14 100 129 222 257 135 141 213 248 268 364 57 124 74 195 74 328 1 108 -7 151 -41 240 -3 8 -3 13 0 10 3 -3 59 -57 124 -120z m-989 -871 c37 -8 58 -24 124 -91 43 -44 75 -84 70 -87 -4 -3 -53 -40 -108 -81 -114 -87 -293 -256 -365 -346 -76 -96 -152 -222 -203 -340 -61 -139 -89 -226 -115 -355 -32 -166 -42 -281 -37 -443 6 -184 38 -377 101 -605 25 -91 43 -167 40 -169 -2 -3 -8 4 -12 14 -9 26 -116 185 -173 259 -25 33 -72 98 -105 145 -33 47 -113 150 -179 230 -129 157 -169 229 -181 323 -4 32 -11 55 -15 50 -5 -4 -13 -31 -18 -60 -16 -91 18 -159 168 -338 106 -126 187 -235 254 -340 32 -49 71 -103 86 -120 34 -35 130 -192 130 -212 0 -11 -7 -11 -36 2 -40 16 -90 20 -98 6 -6 -10 30 -28 104 -51 50 -16 58 -23 92 -78 37 -60 122 -252 115 -259 -2 -2 -26 25 -53 59 -27 35 -98 114 -159 177 -121 125 -218 195 -475 341 -80 45 -197 113 -260 150 -140 82 -194 110 -215 110 -17 0 -20 11 -6 26 5 5 57 97 116 204 59 107 141 252 181 322 41 69 74 129 74 131 0 3 17 34 38 68 21 35 58 100 82 144 24 44 111 199 193 345 82 146 192 342 245 435 107 190 221 391 238 419 8 13 30 21 70 27 68 9 227 3 292 -12z m325 -154 c-19 -25 -33 -32 -33 -16 0 9 38 41 48 41 1 0 -5 -11 -15 -25z m1195 -416 c34 -127 112 -267 197 -352 27 -27 83 -76 124 -109 42 -33 88 -74 104 -91 31 -35 35 -78 13 -131 -8 -18 -54 -75 -102 -126 -49 -52 -105 -111 -126 -132 -20 -21 -30 -37 -22 -36 10 2 22 -19 38 -64 13 -36 32 -79 43 -95 37 -53 36 -58 -30 -127 -34 -35 -77 -72 -96 -81 -18 -9 -29 -20 -25 -25 5 -4 25 -13 45 -19 34 -11 59 -43 59 -76 0 -7 -20 -25 -44 -39 -55 -32 -92 -76 -106 -124 -5 -20 -13 -108 -17 -194 -5 -126 -10 -164 -24 -187 -10 -16 -27 -34 -37 -40 -45 -24 -154 102 -189 219 -11 35 -17 89 -17 150 1 80 6 110 33 190 56 165 146 290 209 290 15 0 52 -7 82 -15 69 -18 123 -20 118 -3 -6 17 -125 57 -170 58 -21 0 -38 3 -38 6 0 3 21 32 48 65 81 102 92 120 112 187 24 78 26 185 4 267 -18 70 -65 159 -123 231 -51 65 -158 139 -297 206 -60 28 -111 53 -113 55 -2 1 18 26 45 56 134 147 209 278 245 433 l24 99 7 -185 c4 -137 11 -205 26 -261z m-1258 351 c0 -5 -14 -33 -31 -62 -17 -29 -63 -115 -101 -192 -39 -77 -96 -178 -127 -225 -94 -139 -182 -289 -229 -391 -60 -128 -102 -295 -109 -436 -7 -128 5 -207 49 -333 l29 -83 -17 -107 c-14 -88 -15 -143 -10 -326 10 -309 10 -293 8 -469 -1 -88 -4 -157 -7 -155 -2 3 -27 79 -54 170 -27 90 -65 214 -84 274 -74 232 -120 419 -142 583 -14 98 -17 166 -12 335 4 162 10 236 27 312 50 234 158 485 278 645 76 103 248 271 388 380 108 84 144 104 144 80z m85 -59 c47 -45 214 -153 317 -206 106 -54 363 -199 393 -221 19 -14 19 -15 -10 -40 -70 -58 -310 -211 -415 -264 -75 -37 -218 -128 -343 -217 -64 -45 -121 -83 -126 -83 -4 0 -21 46 -36 103 -22 80 -29 130 -33 233 -3 97 0 153 12 212 20 100 86 293 130 381 40 80 69 131 76 131 2 0 18 -13 35 -29z m-297 -477 c-7 -21 -12 -104 -12 -184 0 -117 4 -162 22 -234 12 -49 31 -108 41 -131 l18 -41 -79 -80 c-113 -112 -211 -262 -248 -379 -7 -22 -16 -44 -20 -48 -11 -12 -27 41 -46 153 -11 66 -14 119 -10 175 13 160 58 320 131 465 40 82 205 353 211 347 2 -2 -2 -21 -8 -43z m1166 -105 c59 -74 109 -166 142 -264 20 -60 28 -107 32 -190 4 -92 1 -123 -17 -188 -42 -155 -131 -290 -278 -425 -103 -94 -252 -212 -270 -212 -21 0 -155 113 -278 236 -131 130 -219 251 -312 432 l-54 104 43 32 c65 50 213 147 308 203 346 205 434 259 505 312 l79 59 27 -21 c15 -12 48 -47 73 -78z m251 -68 c139 -105 226 -287 210 -438 -9 -89 -55 -174 -175 -323 -56 -69 -117 -153 -136 -187 -19 -34 -49 -101 -67 -150 -30 -82 -32 -97 -32 -223 0 -132 2 -143 40 -234 7 -15 2 -14 -33 8 -23 14 -112 81 -198 149 -218 170 -202 155 -183 167 108 64 336 279 405 383 60 89 109 200 130 296 33 145 4 332 -73 486 -29 56 -80 135 -118 182 -26 31 -24 30 74 -22 56 -29 126 -71 156 -94z m-1289 -553 c54 -109 131 -243 190 -333 61 -93 166 -192 302 -284 50 -35 92 -66 92 -70 0 -9 -157 -106 -215 -133 -39 -17 -67 -22 -130 -22 -103 1 -227 34 -329 87 -100 52 -208 156 -253 245 l-32 62 30 80 c38 106 71 169 131 257 43 62 156 183 172 183 3 0 22 -33 42 -72z m-353 -586 c95 -153 279 -262 514 -303 62 -11 65 -13 40 -22 -48 -16 -169 -86 -232 -134 -96 -74 -152 -146 -216 -278 -66 -138 -107 -269 -116 -372 -3 -40 -9 -70 -13 -68 -18 11 -32 231 -29 439 2 122 -1 307 -5 412 -7 141 -6 216 4 287 7 53 14 97 15 97 1 0 18 -26 38 -58z m-1208 -162 c50 -31 133 -80 185 -110 149 -84 369 -218 435 -265 85 -61 205 -175 274 -259 72 -87 143 -204 178 -288 26 -65 84 -250 80 -255 -2 -1 -46 20 -99 47 -128 64 -296 172 -423 270 -127 98 -344 306 -439 420 -90 108 -206 283 -281 425 -55 103 -56 108 -29 90 16 -10 70 -44 119 -75z m2340 -67 c140 -112 249 -192 383 -283 68 -46 90 -66 82 -74 -17 -17 -347 -13 -602 8 -154 12 -281 17 -395 14 -140 -4 -179 -8 -233 -27 -36 -12 -91 -37 -122 -56 l-57 -33 34 46 c53 74 123 136 218 196 117 73 181 96 265 96 37 0 121 7 187 16 68 9 140 12 167 9 48 -7 61 2 35 23 -24 20 -157 24 -262 8 -55 -8 -104 -11 -108 -7 -5 5 36 31 90 59 54 28 118 62 143 76 25 14 47 25 49 26 2 0 59 -44 126 -97z"/>
+              <path d="M8515 4420 c-9 -15 2 -28 38 -47 18 -9 49 -30 69 -48 43 -36 240 -145 264 -145 20 0 -66 74 -118 101 -20 10 -60 40 -89 66 -28 27 -63 56 -78 65 -29 20 -76 24 -86 8z"/>
+              <path d="M2137 7538 c-2 -178 -2 -694 -1 -1148 2 -454 3 -1438 4 -2187 l0 -1363 130 0 130 0 2 1198 3 1197 1543 -4 c948 -3 1542 -1 1542 5 0 5 -26 57 -58 114 l-58 105 -1487 -2 -1487 -2 0 1205 0 1204 -130 0 -129 0 -4 -322z"/>
+            </g>
+          </svg>
+        </div>
+        <div class="clinic-name">Her Vitality Clinic</div>
+        <div class="for">— For female officers</div>
+        <p class="desc">Focused on hormonal balance, perimenopausal care, thyroid optimization, and metabolic wellness through every life stage.</p>
+        <ul>
+          <li>Hormone &amp; cycle balance</li>
+          <li>Reproductive &amp; perimenopausal health</li>
+          <li>Thyroid optimization</li>
+          <li>Metabolic wellness</li>
+        </ul>
+      </div>
+    </div>
+
+    <p class="clinics-footer reveal reveal-delay-2">Same physician-led, biomarker-driven model — personalized to physiology.</p>
+  </div>
+</section>
+
+<!-- ============== SLIDE 12: ROI ============== -->
+<section class="slide" id="s12">
+  <span class="slide-num">12 / 15</span>
+  <div class="container">
+    <div class="reveal">
+      <div class="top-rule"></div>
+      <div class="eyebrow">The Department Case</div>
+      <h2 class="title-l">What this means<br><em class="gold-text-grad" style="font-style:italic;">for the department.</em></h2>
+      <p class="lede">Healthier officers cost less, get hurt less, and stay on the job longer.</p>
+    </div>
+
+    <div class="roi-grid reveal reveal-delay-1">
+      <div class="roi">
+        <div class="figure">$3–$15</div>
+        <div class="label">returned per $1 invested</div>
+        <div class="source">in workplace wellness programs<br>(American Heart Association)</div>
+      </div>
+      <div class="roi">
+        <div class="figure">28%</div>
+        <div class="label">reduction in sick leave</div>
+        <div class="source">across meta-analyses of workplace wellness initiatives</div>
+      </div>
+      <div class="roi">
+        <div class="figure">30%</div>
+        <div class="label">fewer comp claims</div>
+        <div class="source">structured programs reduce workers' comp costs ~30%</div>
+      </div>
+    </div>
+
+    <div class="honesty-note reveal reveal-delay-2">
+      <div class="lbl">A note on honesty</div>
+      <p>These returns are well documented but build over 2–3 years. We're proposing a long-term partnership, not a quick fix — and we'll track outcomes transparently with you.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============== SLIDE 13: BUILT FOR REALITIES ============== -->
+<section class="slide" id="s13">
+  <span class="slide-num">13 / 15</span>
+  <div class="container">
+    <div class="reveal">
+      <div class="top-rule"></div>
+      <div class="eyebrow">Designed for Policing</div>
+      <h2 class="title-l">Built for the realities<br><em class="gold-text-grad" style="font-style:italic;">of policing.</em></h2>
+      <p class="lede">Generic wellness programs don't survive contact with shift work. Ours is designed for it.</p>
+    </div>
+
+    <div class="reality-grid">
+      <div class="reality reveal reveal-delay-1">
+        <h4>Fits shift work</h4>
+        <p>Flexible scheduling, blocks around rotating shifts and nights, asynchronous coaching when needed.</p>
+      </div>
+      <div class="reality reveal reveal-delay-2">
+        <h4>Stigma-aware</h4>
+        <p>Framed as performance and longevity, not treatment. Confidential. Optional peer cohorts.</p>
+      </div>
+      <div class="reality reveal reveal-delay-3">
+        <h4>Data-driven, not opinion-driven</h4>
+        <p>Officers see their own DEXA, VO₂, labs. Decisions are based on their data — not generic advice.</p>
+      </div>
+      <div class="reality reveal reveal-delay-4">
+        <h4>Complements existing supports</h4>
+        <p>We focus on physical health, hormones, performance — and refer in/out cleanly with mental health and peer support.</p>
+      </div>
+    </div>
+
+    <p class="reality-note reveal">We do <strong>not</strong> replace mental health resources — we strengthen the surrounding scaffolding so they work better.</p>
+  </div>
+</section>
+
+<!-- ============== SLIDE 14: PARTNERSHIP OPTIONS ============== -->
+<section class="slide" id="s14">
+  <span class="slide-num">14 / 15</span>
+  <div class="container">
+    <div class="reveal">
+      <div class="top-rule"></div>
+      <div class="eyebrow">A Partnership</div>
+      <h2 class="title-l">What a partnership<br><em class="gold-text-grad" style="font-style:italic;">could look like.</em></h2>
+      <p class="lede">This is a first conversation. Here are three options — we're flexible.</p>
+    </div>
+
+    <div class="options-grid">
+      <div class="option reveal reveal-delay-1">
+        <div class="opt-num">01</div>
+        <div class="opt-tag">Option One</div>
+        <h4>Pilot cohort</h4>
+        <p>5–10 interested officers complete a 6-month program. We track outcomes (DEXA, labs, fitness, sick days) and share aggregated results.</p>
+      </div>
+      <div class="option reveal reveal-delay-2">
+        <div class="opt-num">02</div>
+        <div class="opt-tag">Option Two</div>
+        <h4>Referral pathway</h4>
+        <p>A formal pathway for officers to access the program voluntarily, paid via personal HSA or extended benefits. No mandate, no pressure.</p>
+      </div>
+      <div class="option reveal reveal-delay-3">
+        <div class="opt-num">03</div>
+        <div class="opt-tag">Option Three</div>
+        <h4>Joint initiative</h4>
+        <p>An integrated program offered to all officers, with funding co-developed with the department. Outcomes reported annually.</p>
+      </div>
+    </div>
+
+    <div class="hsa-banner reveal reveal-delay-4">
+      <div class="hsa-title">HSA / Wellness Fund Compatible</div>
+      <ul class="hsa-list">
+        <li>Compatible with CRA-approved medical expense categories</li>
+        <li>No out-of-pocket cost to officers if reimbursed via HSA / extended benefits</li>
+        <li>Backed by physician documentation and evidence-based outcomes</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ============== SLIDE 15: CLOSING ============== -->
+<section class="slide slide-closing" id="s15">
+  <span class="slide-num" style="color: var(--text-muted);">15 / 15</span>
+  <div class="container reveal">
+    <div class="closing-eyebrow">Protect Them Project</div>
+    <h2 class="closing-headline">Your officers protect the community.<br><em>Let's protect them.</em></h2>
+
+    <div class="closing-divider"></div>
+
+    <div class="next-steps-title">Next Steps</div>
+    <div class="next-steps">
+      <div class="next-step">
+        <div class="num-badge">i</div>
+        <p>A follow-up meeting to discuss which option fits best</p>
+      </div>
+      <div class="next-step">
+        <div class="num-badge">ii</div>
+        <p>An optional clinic tour</p>
+      </div>
+      <div class="next-step">
+        <div class="num-badge">iii</div>
+        <p>A scoped pilot proposal</p>
+      </div>
+    </div>
+
+    <div class="closing-contact">
+      <div class="presenter">[Presenter Name, MD]</div>
+      <div class="meta">[Email]<span>·</span>(236) 259-3550<span>·</span>(236) 485-9504</div>
+      <div class="clinics-footer-line">Men's Vitality Clinic <span>·</span> Her Vitality Clinic</div>
+    </div>
+  </div>
+</section>
+
+<script>
+  // Reveal-on-scroll
+  const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  if (prefersReducedMotion) {
+    document.querySelectorAll('.reveal').forEach(el => el.classList.add('visible'));
+  } else {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.05, rootMargin: '0px 0px -10% 0px' });
+
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+  }
+</script>
+
+</body>
+</html>
